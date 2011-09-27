@@ -1,0 +1,29 @@
+Umbrella 2.0
+
+Take a photo or movie with your iPhone and mail it to a server or website of your own.  No need for the Cloud or a third party site.
+
+Copyright 2004, 2007, 2011 by stega:  stega@stega.org
+
+Supported phones: iPhone 1 and newer.
+
+History: Originally took data from a Sony Erickson 615 and pushed it out. Now it functions with images from an iPhone. Future support may include other phones (android/blackberry). 
+
+2.0 added ability to rotate image based on EXIF data in image as due to changes in IOS 3.0 and greater, images are now saved with the rotation/orientation information in the EXIF information.   
+
+Requirements: mpack, jpegtran and exifprobe.  You also need to be able to pipe/filter your email to the umbrella.sh script. All three utilities are available via the FreeBSD ports/pkg utilities.  For other operating systems, please check accordingly. 
+
+To use this script:  
+* Place umbrella.sh in a directory that is not within /home/www or where ever your website lives.
+* Edit umbrella.sh and replace the values for all variables necessary 
+* Create a directory named Umbrella within your site file (ie /home/www/$TLD/Umbrella) 
+* Move index.php to the directory you have created. 
+* Edit index.php and replace the values for all variables necessary 
+* Touch feed.xml and old.xml 
+* Move placeholder.txt and placeholder.jpg to your working directory (These are used if something goes wrong.)
+* Create a mail filter to pass incoming messages to umbrella.sh (You will want to filter by both sending/receiving address and possibly other variables to insure basic security.)
+
+See the contents of the sample directory to perform tests prior to launching.  Once tests are successful, delete feed.xml and old.xml and being your blogging.
+
+License: Released under GNU GPL 3.0
+http://www.gnu.org/licenses/gpl-3.0.html
+
