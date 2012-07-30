@@ -1,0 +1,51 @@
+#!/bin/sh
+##VARIABLES: YOU NEED TO CHANGE THESE FOR YOUR SETUP
+# Configure your working directory:  this should be where the feed will actually live.
+# If this is the first time you are running the script, make sure you create/touch feed.xml and old.xml 
+# and have created placeholder.txt and placeholder.jpg in your working directory
+# This is also where you will put the index.php
+WORKDIR="/home/www/Sites/stega.org/htdocs/mblog/Umbrella" 
+#WORKDIR="/FULLPATH_TO_SITE/Umbrella" 
+#
+#Type of phone: iphone, android, blackberry, or other
+PHONE=iphone
+#
+# Configure your absolute/FQd URL for the above directory (no trailing /)
+URL="http://www.stega.org/mblog/Umbrella"
+#URL="http://www.yourdomain.com/Ubrella/"
+#
+# Configure your TLD (or whatever you want as the site root) 
+SITE="http://www.stega.org"
+#SITE="http://www.yourdomain.com"
+#
+# Configure your contact email: to be sure to include a real name value within the ()
+EMAIL="stega@stega.org (stega)" 
+#EMAIL="user@yourdomain.com (stega)" 
+#
+# Your copyright information
+COPYRIGHT="Copyright 2012, stega doggie and tree."
+#COPYRIGHT="Copyright 2012, by me."
+#
+#Path to file with any Comment/Copyright you want added to the EXIF--leave this empty if you do not wish to use (Not supported yet.)
+#COMMENTS="/home/www/Sites/stega.org/htdocs/mblog/Umbrella/comments.txt"
+#COMMENTS="/home/www/Sites/stega.org/htdocs/mblog/Umbrella/comments.txt"
+#
+# Timezone (as three letters)
+TZ="PDT"
+# 
+#
+# You should not need to change these variables below
+#use for name of image/title files
+TIMESTAMP=`/bin/date '+%Y%m%d%H%M%S'`
+
+#use for xml title info files
+TITLESTAMP=`/bin/date '+%a-%d-%b-%Y-%H:%M'` 
+
+#use for pubDate and lastBuild
+DCSTAMP=`/bin/date '+%a, %d %b %Y %H:%M:%S'` 
+TEMPFILE=`mktemp ${WORKDIR}/umbrella-mail.XXXXXX`
+
+# These may need set if you have things installed elsewhere
+MUNPACK="/usr/local/bin/munpack"
+JPEGTRAN="/usr/local/bin/jpegtran"
+EXIFPROBE="/usr/local/bin/exifprobe"
