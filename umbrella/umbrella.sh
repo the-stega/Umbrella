@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# Umbrella 2.0 iPhone to RSS
-# Take a picture or video with your Phone and post it to your private (non-cloud) photo/vid blog
+# Umbrella 3.0 smart phone to RSS
+# Take a picture or video with your phone and post it to your private (non-cloud) photo/vid blog
 # Copyright 2004, 2007, 2011, 2012 by stega:  stega@stega.org
 #
 #
