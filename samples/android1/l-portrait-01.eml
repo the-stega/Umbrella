@@ -1,5 +1,5 @@
-From lloo@eme.ca Mon Jul 30 11:02:39 2012
-Return-Path: <leon.loo@gmail.com>
+From stega@stega.org Mon Jul 30 11:02:39 2012
+Return-Path: <stega@stega.org>
 Received: from mail-wg0-f45.google.com ([74.125.82.45] verified)
   by purgatory.org (CommuniGate Pro SMTP 5.2.14)
   with ESMTPS id 1776485 for Stega@stega.org; Mon, 30 Jul 2012 11:02:39 -0700
@@ -19,14 +19,14 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
 MIME-Version: 1.0
 Received: by 10.180.90.207 with SMTP id by15mr43966091wib.22.1343671357138;
  Mon, 30 Jul 2012 11:02:37 -0700 (PDT)
-Sender: leon.loo@gmail.com
+Sender: stega@stega.org
 Received: by 10.217.6.200 with HTTP; Mon, 30 Jul 2012 11:02:36 -0700 (PDT)
 Received: by 10.217.6.200 with HTTP; Mon, 30 Jul 2012 11:02:36 -0700 (PDT)
 Date: Mon, 30 Jul 2012 14:02:36 -0400
 X-Google-Sender-Auth: Vyl-yECLhweVp-hYXWA-pNcXzZI
 Message-ID: <CA+oUp23NjvoLoQ4LhcCFSAGQhDW2SzRXcK7d9WPtY=EPxTs0CQ@mail.gmail.com>
 Subject: Test - Portrait
-From: Leon Loo <lloo@eme.ca>
+From: Stega <stega@stega.org>
 To: Stega@stega.org
 Content-Type: multipart/mixed; boundary=f46d043c8046efe70604c60fdd09
 

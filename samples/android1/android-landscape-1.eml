@@ -1,4 +1,4 @@
-Return-path: <sean@geekincreekans.com>
+Return-path: <stega@stega.org>
 Received: from smtpin126.mac.com ([10.150.68.126])
  by ms364.mac.com (Oracle Communications Messaging Server 7u4-23.01(7.0.4.23.0)
  64bit (built Aug 10 2011)) with ESMTP id <0LSB00AHB423Y3Z0@ms364.mac.com> for
@@ -27,10 +27,10 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	b=NiAtZWsm4OuseGOm/WDcVfeYRmVsSMvKQgcn7SNyTeo2092rGT4/ba/VhVwDO8JqovR5ovOMK8s2Hm/Hr2FIsyEVqCLSQl6sUtHU/ZzLtXTpqdM8P5zsRJqS84Gzb3OE;
 Received: from [64.124.57.5] (helo=[192.168.0.38])	by box668.bluehost.com with
  esmtpsa (TLSv1:AES256-SHA:256)	(Exim 4.76)
-	(envelope-from <sean@geekincreekans.com>)
+	(envelope-from <stega@stega.org)
 	id 1R9PdW-0002b5-CX	for stega@mac.com; Thu, 29 Sep 2011 17:03:33 -0600
 To: =?utf-8?B?TEMgQm9yb3M=?= <stega@mac.com>
-From: =?utf-8?B?U2VhbiBNY0xlYW4=?= <sean@geekincreekans.com>
+From: =?utf-8?B?U2VhbiBNY0xlYW4=?= <stega@stega.org>
 Subject: =?utf-8?B?UG9ydHJhaXQgb3JpZW50YXRpb24=?=
 Date: Thu, 29 Sep 2011 16:03:26 -0700
 MIME-version: 1.0

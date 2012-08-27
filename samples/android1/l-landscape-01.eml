@@ -1,4 +1,4 @@
-Return-Path: <leon.loo@gmail.com>
+Return-Path: <stega@stega.org>
 Received: from mail-wi0-f173.google.com ([209.85.212.173] verified)
   by purgatory.org (CommuniGate Pro SMTP 5.2.14)
   with ESMTPS id 1776469 for Stega@stega.org; Mon, 30 Jul 2012 11:01:09 -0700
@@ -18,7 +18,7 @@ DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
 MIME-Version: 1.0
 Received: by 10.180.98.69 with SMTP id eg5mr3188923wib.3.1343671266754; Mon,
  30 Jul 2012 11:01:06 -0700 (PDT)
-Sender: leon.loo@gmail.com
+Sender: stega@stega.org
 Received: by 10.217.6.200 with HTTP; Mon, 30 Jul 2012 11:01:05 -0700 (PDT)
 Received: by 10.217.6.200 with HTTP; Mon, 30 Jul 2012 11:01:05 -0700 (PDT)
 In-Reply-To: <CA+oUp21o5xf-oiBjobCYwSYYVbDkDTLCye+=PJj_c=pBqP_p_Q@mail.gmail.com>
@@ -27,7 +27,7 @@ Date: Mon, 30 Jul 2012 14:01:05 -0400
 X-Google-Sender-Auth: 8nwyDvl3reUDlJZkmgJlra72P_s
 Message-ID: <CA+oUp23LMW5PtCcogT3MO7N-d5itaFupT+ZFjbC+pVgThxeKCA@mail.gmail.com>
 Subject: Test - Landscape
-From: Leon Loo <lloo@eme.ca>
+From: Stega <stega@stega.orga>
 To: Stega@stega.org
 Content-Type: multipart/mixed; boundary=f46d041828208cc30904c60fd881
 
