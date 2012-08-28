@@ -4,14 +4,14 @@
 # If this is the first time you are running the script, make sure you create/touch feed.xml and old.xml 
 # and have created placeholder.txt and placeholder.jpg in your working directory
 # This is also where you will put the index.php
-WORKDIR="/home/www/Sites/stega.org/htdocs/mblog/Umbrella" 
+WORKDIR="/home/www/Sites/stega.org/htdocs/Umbrella" 
 #WORKDIR="/FULLPATH_TO_SITE/Umbrella" 
 #
 #Type of phone: iphone, android, blackberry, or other
 PHONE=iphone
 #
 # Configure your absolute/FQd URL for the above directory (no trailing /)
-URL="http://www.stega.org/mblog/Umbrella"
+URL="http://www.stega.org/Umbrella"
 #URL="http://www.yourdomain.com/Ubrella/"
 #
 # Configure your TLD (or whatever you want as the site root) 
