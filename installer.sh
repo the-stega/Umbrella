@@ -10,6 +10,7 @@
 # Location for www files
 . variables
 WEB=$WORKDIR
+mkdir $WEB
 cp www/index.php $WEB/
 cp www/placeholder.jpg $WEB/
 cp www/placeholder.txt $WEB/
