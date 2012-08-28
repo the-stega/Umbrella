@@ -8,7 +8,7 @@
 # Set Variables
 # 
 # Location for www files
-. variables
+. umbrella/variables
 WEB=$WORKDIR
 mkdir $WEB
 cp www/index.php $WEB/
