@@ -15,7 +15,7 @@ cp www/index.php $WEB/
 cp www/placeholder.jpg $WEB/
 cp www/placeholder.txt $WEB/
 cp www/style.css $WEB/
-touch feed.xml
-touch old.xml
-tar -xvf dev/magpierss-0.72.tar $WEB/
+touch $WEB/feed.xml
+touch $WEB/old.xml
+tar -xvf dev/magpierss-0.72.tar $WEB
 ln -s $WEB/magpierss-0.72 $WEB/magpierss
