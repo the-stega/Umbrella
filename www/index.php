@@ -2,13 +2,13 @@
 # Call magpierss
 require_once('magpierss/rss_fetch.inc');
 #Change this variable to control the number of entries displayed on each page.
-$how_many=4;
+$how_many=HOW_MANY;
 #Change this to the path for your feed.xml
 #$my_url='http://www.yourdomain.com/Umbrella/feed.xml';
-$my_url='http://www.stega.org/mblog/Umbrella/feed.xml';
+$my_url='URL_REPLACE';
 #Change this entry if you wish to use your own stylesheet
 #$style_sheet='otherstyle.css>';
-$style_sheet='href=http://www.stega.org/resources/otherstyle.css>';
+$style_sheet='STYLESHEET_REPLACE>';
 
 
 ###Begin function to display page

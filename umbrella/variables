@@ -22,6 +22,12 @@ SITE="http://www.stega.org"
 EMAIL="stega@stega.org (stega)" 
 #EMAIL="user@yourdomain.com (stega)" 
 #
+# Configure how many entries will be shown (you can manually change this later by editing the working index.php)
+HOWMANY="4"
+#
+# Optional Configure a stylesheet you would like to use (default is style.css) If you change this, it should be the full or relative path.
+STYLE="style.css"
+#
 # Your copyright information
 COPYRIGHT="Copyright 2012, stega doggie and tree."
 #COPYRIGHT="Copyright 2012, by me."

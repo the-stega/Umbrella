@@ -1,4 +1,4 @@
-#!/bin/sh -v
+#!/bin/sh
 #
 # Umbrella 3.0 smart phone to RSS
 # Take a picture or video with your phone and post it to your private (non-cloud) photo/vid blog
@@ -13,7 +13,6 @@ WEB=$WORKDIR
 echo 'web='$WEB
 mkdir $WEB
 echo 'I have made the web directory'
-cp www/index.php $WEB/
 cp www/placeholder.jpg $WEB/
 cp www/placeholder.txt $WEB/
 cp www/style.css $WEB/
@@ -27,3 +26,7 @@ mv magpierss-0.72 $WEB/
 echo 'I have moved magpierss'
 ln -s $WEB/magpierss-0.72 $WEB/magpierss
 echo 'I have made the symlink'
+
+cat www/index.php | sed -e 's/HOWMANY/$HOW_MANY/' > www/new_index.php
+#| sed -e 's/URL_REPLACE/$URL/' | sed -e 's/STYLESHEET_REPLACE/$STYLE/' > www/new_index.php
+mv www/new_index.php $WEB/index.php
