@@ -26,7 +26,7 @@ To use this script:
 3) Move the contents of www/ to this directory
 4) Edit index.php and replace the values for all variables necessary 
 5) Touch feed.xml and old.xml if they do not exist
-6) Feel free to edit placeholder.txt and placeholder.jpg to be something personal. (These are used if something goes wrong.)
+6) Feel free to edit placeholder.txt to be something personal. (These are used if something goes wrong.)
 7) Edit Umbrella/variables.txt and replace the values for all variables necessary 
 8) Create a mail filter to pass incoming messages to umbrella.sh (You will want to filter by both sending/receiving address and possibly other variables to insure basic security.)
 9) See the contents of the sample directory to perform tests prior to launching.  Once tests are successful, delete feed.xml and old.xml and begin your blogging.
@@ -37,4 +37,3 @@ Auto-detect source
 
 License: Released under GNU GPL 3.0
 http://www.gnu.org/licenses/gpl-3.0.html
-
