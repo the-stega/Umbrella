@@ -27,6 +27,6 @@ echo 'I have moved magpierss'
 ln -s $WEB/magpierss-0.72 $WEB/magpierss
 echo 'I have made the symlink'
 
-cat www/index.php | sed -e 's/HOWMANY/$HOW_MANY/' > www/new_index.php
-#| sed -e 's/URL_REPLACE/$URL/' | sed -e 's/STYLESHEET_REPLACE/$STYLE/' > www/new_index.php
+cat www/index.php | sed -e 's/HOWMANY/${HOW_MANY}/' 's/URL_REPLACE/${URL}/' 's/STYLESHEET_REPLACE/${STYLE}/' > www/new_index.php
+
 mv www/new_index.php $WEB/index.php
