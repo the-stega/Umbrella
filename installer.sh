@@ -24,7 +24,7 @@ tar -xf dev/magpierss-0.72.tar
 echo 'I have untard magpierss'
 mv magpierss-0.72 $WEB/
 echo 'I have moved magpierss'
-ln -s $WEB/magpierss-0.72 $WEB/magpierss
+ln -s $WEB/magpierss-0.72 magpierss
 echo 'I have made the symlink'
 
 #cat www/index.php | sed -e 's/HOWMANY/${HOW_MANY}/' 's/URL_REPLACE/${URL}/' 's/STYLESHEET_REPLACE/${STYLE}/' > www/new_index.php
