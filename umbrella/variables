@@ -49,7 +49,7 @@ TITLESTAMP=`/bin/date '+%a-%d-%b-%Y-%H:%M'`
 
 #use for pubDate and lastBuild
 DCSTAMP=`/bin/date '+%a, %d %b %Y %H:%M:%S'` 
-TEMPFILE=`mktemp ${WORKDIR}/umbrella-mail.XXXXXX`
+TEMP_TEMPLATE=${WORKDIR}/umbrella-mail.XXXXXX
 
 # These may need set if you have things installed elsewhere
 MUNPACK="/usr/local/bin/munpack"
