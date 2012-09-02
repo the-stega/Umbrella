@@ -15,25 +15,35 @@ v1.0 Made to work with an iPhone.
 
 v2.0 added ability to rotate image based on EXIF data in image as due to changes in IOS 3.0 and greater, images are now saved with the rotation/orientation information in the EXIF information.   
 
-v3.0 added support for other phones and made it a bit more user friendly
+v3.0 added support for other phones and made it a bit more user friendly.  Added the installer script.
 
 
 Requirements: mpack, jpegtran and exifprobe.  You also need to be able to pipe/filter your email to the umbrella.sh script. All three utilities are available via the FreeBSD ports/pkg utilities.  For other operating systems, please check accordingly. 
 
 To use this script:  
 1) Place the Umbrella directory in a directory that is not within /home/www or where ever your website lives.  Your home directory is a good choice.
-2) Create a directory named Umbrella within your site file (ie /home/www/SITE/Umbrella) 
-3) Move the contents of www/ to this directory
-4) Edit index.php and replace the values for all variables necessary 
-5) Touch feed.xml and old.xml if they do not exist
-6) Feel free to edit placeholder.txt to be something personal. (These are used if something goes wrong.)
-7) Edit Umbrella/variables.txt and replace the values for all variables necessary 
-8) Create a mail filter to pass incoming messages to umbrella.sh (You will want to filter by both sending/receiving address and possibly other variables to insure basic security.)
-9) See the contents of the sample directory to perform tests prior to launching.  Once tests are successful, delete feed.xml and old.xml and begin your blogging.
+2) Edit the umbrella/variables.txt file replacing the values for all variables necessary 
+3) Run the installer.sh script  (see list below for what the script does)
+4) Test the application by running it with one of the included messages.
+5) Create a mail filter to pass incoming messages to umbrella.sh (You will want to filter by both sending/receiving address and possibly other variables to insure basic security.)
+6) Test with your phone as the sending device.  Keep in mind there is no uniformity across most Android platforms, so if you are using such a device, you may need to adjust items in the device specific script.
+7) See the contents of the WORKDIR/index.php to perform tests prior to launching.  Once tests are successful, delete feed.xml and old.xml and begin your blogging. You can also simply delete your WORKDIR and re-run the installer.sh
 
+
+
+The install.sh script does the following:
+1) Creates a directory within your web site (ie /home/www/SITE/Umbrella) This is WORKDIR.
+2) Moves the contents of www/ to this directory (except for index.php) and touches feed.xml and old.xml if they do not exist in the WORKDIR location
+3) Edits index.php and places edited version in WORKDIR
+4) unpacks magpierss and creates sym link in WORKDIR
+
+
+##########################
 Wishlist for future updates:
 Geo EXIF Data inclusion
 Auto-detect source
+##########################
+
 
 License: Released under GNU GPL 3.0
 http://www.gnu.org/licenses/gpl-3.0.html

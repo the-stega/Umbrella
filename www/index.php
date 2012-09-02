@@ -3,11 +3,11 @@
 require_once('magpierss/rss_fetch.inc');
 #Change this variable to control the number of entries displayed on each page.
 $how_many=HOW_MANY;
+#
 #Change this to the path for your feed.xml
-#$my_url='http://www.yourdomain.com/Umbrella/feed.xml';
 $url='URL_REPLACE/feed.xml';
+#
 #Change this entry if you wish to use your own stylesheet
-#$style_sheet='otherstyle.css>';
 $style_sheet='STYLESHEET_REPLACE>';
 
 
