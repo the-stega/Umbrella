@@ -26,7 +26,7 @@ EMAIL="stega@stega.org (stega)"
 HOW_MANY=4
 #
 # Optional Configure a stylesheet you would like to use (default is style.css) If you change this, it should be the full or relative path.
-STYLE="style.css"
+STYLE="http://www.stega.org/Umbrella/style.css"
 #
 # Your copyright information
 COPYRIGHT="Copyright 2012, stega doggie and tree."
