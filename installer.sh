@@ -8,7 +8,7 @@
 # Set Variables
 # 
 # Location for www files
-. umbrella/variables
+. umbrella/variables.txt
 WEB=$WORKDIR
 mkdir ${WEB}
 cp www/placeholder.jpg ${WEB}/
