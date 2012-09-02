@@ -18,9 +18,7 @@ touch ${WEB}/feed.xml
 touch ${WEB}/old.xml
 tar -xf dev/magpierss-0.72.tar 
 mv magpierss-0.72 ${WEB}/
-cd ${WEB}
-ln -s magpierss-0.72 magpierss
 
-cat www/index.php | sed -e 's/HOWMANY/${HOW_MANY}/' 's/URL_REPLACE/${URL}/' 's/STYLESHEET_REPLACE/${STYLE}/' > www/new_index.php
+(cd ${WEB} && ln -s magpierss-0.72 magpierss)
 
-#mv www/new_index.php $WEB/index.php
+cat www/index.php | sed -e "s/HOWMANY/${HOW_MANY}/" "s/URL_REPLACE/${URL}/" "s/STYLESHEET_REPLACE/${STYLE}/" > ${WEB}/index.php
