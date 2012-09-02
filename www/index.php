@@ -5,7 +5,7 @@ require_once('magpierss/rss_fetch.inc');
 $how_many=HOW_MANY;
 #
 #Change this to the path for your feed.xml
-$url='URL_REPLACE/feed.xml';
+$my_url='URL_REPLACE/feed.xml';
 #
 #Change this entry if you wish to use your own stylesheet
 $style_sheet='STYLESHEET_REPLACE>';
@@ -72,10 +72,10 @@ if(isset($_GET['show'])){
     $show=$_GET['show'];
 } else {
 
-    $show=$how_many;
+    $show = $how_many;
 }
 
-$url=$my_url;
+$url = $my_url;
 $rss = fetch_rss($url);
 $rss_size=sizeof($rss->items);
 
