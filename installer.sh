@@ -20,5 +20,7 @@ tar -xf dev/magpierss-0.72.tar
 mv magpierss-0.72 ${WEB}/
 
 (cd ${WEB} && ln -s magpierss-0.72 magpierss)
+(cd ${WEB} && mkdir images)
+(cd ${WEB} && mkdir movies)
 
 cat www/index.php | sed -e "s%HOW_MANY%${HOW_MANY}%" -e "s%URL_REPLACE%${URL}%" -e "s%STYLESHEET_REPLACE%${STYLE}%" > ${WEB}/index.php
