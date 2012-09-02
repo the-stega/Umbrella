@@ -10,13 +10,9 @@ XML_Header() {
     echo "<lastBuildDate>${DCSTAMP} ${TZ}</lastBuildDate>"  >> ${WORKDIR}/feed.xml
     echo "<generator>Umbrella 2.0</generator>" >> ${WORKDIR}/feed.xml
     echo "<managingEditor>${EMAIL}</managingEditor>" >> ${WORKDIR}/feed.xml
-    echo "<copyright>
-    Copyright 2011, stega doggie and tree.</copyright>" 
-
-    >> ${WORKDIR}/feed.xml
-    
+    echo "<copyright>${COPYRIGHT}</copyright>" >> ${WORKDIR}/feed.xml
     echo "<ttl>40</ttl>" >> ${WORKDIR}/feed.xml
-    }    
+}    
 #
 XML_IMAGE(){ 
 #subroutine to build xml for images
