@@ -24,7 +24,7 @@ DO_FILE
 
 XML_Header
 
-if [ ${MODE} == "image" ]; then
+if [ ${MODE}x = "imagex" ]; then
 	XML_IMAGE ${OUTPUT_FILE}
 else
 	XML_MOVIE ${OUTPUT_FILE}
