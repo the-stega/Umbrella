@@ -6,7 +6,7 @@
 #
 #
 # Import the variable file
-. variables
+. variables.txt
 . device/${PHONE}.sh
 . write-xml.sh
 
