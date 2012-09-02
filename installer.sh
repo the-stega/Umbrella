@@ -21,4 +21,4 @@ mv magpierss-0.72 ${WEB}/
 
 (cd ${WEB} && ln -s magpierss-0.72 magpierss)
 
-cat www/index.php | sed -e "s%HOWMANY%${HOW_MANY}%" -e "s%URL_REPLACE%${URL}%" -e "s%STYLESHEET_REPLACE%${STYLE}%" > ${WEB}/index.php
+cat www/index.php | sed -e "s%HOW_MANY%${HOW_MANY}%" -e "s%URL_REPLACE%${URL}%" -e "s%STYLESHEET_REPLACE%${STYLE}%" > ${WEB}/index.php
