@@ -6,18 +6,15 @@ body
 	font-size: 12px;
 	font-family: "Lucida Grande",Tahoma,"Lucida Sans Unicode",Verdana,sans-serif;
 	background-color: #000;
-
 }
 table, td
 {
-
 }
 img { border: none; margin: 0; padding: 0;}
 
 #page
 {
 }
-
 
 /* ########## */
 /* ##### HEADER STYLES, default ##### */
@@ -34,10 +31,7 @@ img { border: none; margin: 0; padding: 0;}
  	margin: 0;
  	font-weight: lighter;
 	font-family: "Lucida Grande",Tahoma,"Lucida Sans Unicode",Verdana,sans-serif;
- /* 	font-family: Impact, Impact, Charcoal, sans-serif; */
-
-
-}
+ }
 
 #header h2
 {
@@ -57,28 +51,24 @@ img { border: none; margin: 0; padding: 0;}
  	margin: 0;
  	font-weight: lighter;
 	font-family: "Lucida Grande",Tahoma,"Lucida Sans Unicode",Verdana,sans-serif;
- /* 	font-family: Impact, Impact, Charcoal, sans-serif; */
-
-
 }
 
 a:link 
 {
 		color: white;
         text-decoration: underline; !important; 
-        }
+}
 a:hover 
 {
 		color: #999;
         text-decoration: none; !important; 
-        }
+}
 /* a:active { text-decoration: none !important; }*/
 a:visited 
 { 
 		color: #CCC; 
 		text-decoration: none !important; 
-		}
-
+}
 /* ########## */
 /* ##### GENERAL NAVIGATION STYLES, controls previous & next number menu between pages ##### */
 
@@ -88,22 +78,17 @@ a:visited
 	margin-left: -10px;
 }
 
-
 /* ##### PHOTO STYLES ##### */
 #content #photo
 {
 padding-bottom: 25px; 
-
-
 }
-
 
 #footer
 {
 	margin: 15px 0 0 0;
 	text-align: right;
-	font-size: 0.87em;
-	
+	font-size: 0.87em;	
 	color: #fff;
 }
 #footer p.footerCopy
