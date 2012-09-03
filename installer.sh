@@ -9,7 +9,7 @@
 . umbrella/variables.txt
 # 
 # Check variables for changes
-if [ ! -d ${WORKDIR} ]
+if [ ${WORKDIR}x = "/FULLPATH_TO_SITE/Umbrella"x ]
 then 
 	echo "WORKDIR is not set to an actual directory"
 	exit 1
