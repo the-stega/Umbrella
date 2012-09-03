@@ -5,35 +5,11 @@ Received: from st11b01mm-smtpin206.mac.com ([17.172.48.37])
  with ESMTP id <0M8O00EDD2JN5ND1@ms02512.mac.com> for stega@mac.com; Sun,
  12 Aug 2012 23:57:24 +0000 (GMT)
 Original-recipient: rfc822;stega@mac.com
-Received: from mail.portsamerica.com ([206.155.87.138])
- by st11b01mm-smtpin206.mac.com
- (Oracle Communications Messaging Server 7u4-23.01(7.0.4.23.0) 64bit (built Aug
- 10 2011)) with ESMTP id <0M8O00FH92JJ1L11@st11b01mm-smtpin206.mac.com> for
- stega@mac.com (ORCPT stega@mac.com); Sun, 12 Aug 2012 23:57:23 +0000 (GMT)
-X-Proofpoint-Virus-Version: vendor=fsecure
- engine=2.50.10432:5.7.7855,1.0.260,0.0.0000
- definitions=2012-08-12_06:2012-08-10,2012-08-12,1970-01-01 signatures=0
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
- suspectscore=0 phishscore=0 bulkscore=0 adultscore=0 classifier=spam adjust=0
- reason=mlx scancount=1 engine=6.0.2-1203120001 definitions=main-1208120313
-Received: from CAALHT01.ports.corp (10.100.71.36) by s605726nj3vw38.ports.corp
- (10.89.22.132) with Microsoft SMTP Server (TLS) id 8.3.83.0; Sun,
- 12 Aug 2012 19:57:11 -0400
-Received: from CAALCCRA.ports.corp ([10.100.70.65])
- by CAALHT01.ports.corp ([10.100.71.36]) with mapi; Sun,
- 12 Aug 2012 16:57:07 -0700
-From: Eric Todd <Eric.Todd@portsamerica.com>
+From: "E<"stega@stega.org" <stega@stega.org>
 To: "'stega@mac.com'" <stega@mac.com>
 Date: Sun, 12 Aug 2012 16:57:06 -0700
 Subject: IMG-20120731-00019.jpg
-Thread-topic: IMG-20120731-00019.jpg
-Thread-index: Ac145i1Q1iU9+aehR06zaRAe7fcG7A==
 Message-id: <186B0211248E804AB7F9F0E4055811B702A290D042@CAALCCRA.ports.corp>
-Accept-Language: en-US
-Content-language: en-US
-X-MS-Has-Attach: yes
-X-MS-TNEF-Correlator:
-acceptlanguage: en-US
 Content-type: multipart/mixed;
  boundary=_002_186B0211248E804AB7F9F0E4055811B702A290D042CAALCCRAports_
 MIME-version: 1.0
@@ -46,17 +22,6 @@ Content-Type: TEXT/PLAIN;
 	charset=iso-8859-1
 
 
-CONFIDENTIALITY and DISCLAIMER NOTICE: Ports America is the brand name for =
-the stevedore and terminal operating companies owned by Ports America, Inc.=
-, MTC Holdings, LLC and their affiliates. This e-mail and any files transmi=
-tted with it are confidential and may contain information which is legally =
-privileged or otherwise exempt from disclosure. They are intended solely fo=
-r the use of the individual or entity to which this e-mail is addressed. If=
- you are not one of the named recipients or otherwise have reason to believ=
-e that you have received this message in error, please immediately notify t=
-he sender and delete this message immediately from your computer. Any other=
- use, retention, dissemination, forwarding, printing, or copying of this e-=
-mail is strictly prohibited.
 
 --_002_186B0211248E804AB7F9F0E4055811B702A290D042CAALCCRAports_
 Content-Disposition: ATTACHMENT;
