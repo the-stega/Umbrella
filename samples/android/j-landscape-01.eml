@@ -2,30 +2,10 @@ Return-Path: <stega@stega.org>
 Received: from mail-yw0-f51.google.com ([209.85.213.51] verified)
   by purgatory.org (CommuniGate Pro SMTP 5.2.14)
   with ESMTPS id 1776744 for stega@stega.org; Mon, 30 Jul 2012 15:06:39 -0700
-Received: by yhnn12 with SMTP id n12so4980887yhn.38
-        for <stega@stega.org>; Mon, 30 Jul 2012 15:06:38 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20120113;
-        h=date:subject:message-id:importance:from:to:reply-to:mime-version
-         :content-type;
-        bh=mOd3wt200b9KKc7BQjQ1dIu8C+G3EVuTy2Bblx1Sv4U=;
-        b=kBXVSyNlNM70WduYL0o8p1nV/xVcnVQWmqAGxP2qxLU3O3nfaf4SgTxsVjgcIjW8R9
-         jZNYxrEGpBw+0FyQJ5H+ILSh/4iajO0fRw4jyELZ+VNmC5RvPdaVhjWxGBOFj4tLDVP2
-         3pj51icnhVfzi2zJ0J/i0B3e860qlzmKU20UG+JJzt6mjY56iKfrsCefP7OpiK3GtpSG
-         KFmYipy+U8P+z6XkMPvk74S49RE5SRMqEQQxy+QZyZv8m4LKxiM/93FRzwHm74c8+69q
-         uQBRLZgdd6m3uJ0odF+hhQJRD8O0IoRC2KuV/bQk0BariFh74zmQkiAwYUcW5l8u7FX6
-         TChg==
-Received: by 10.66.9.2 with SMTP id v2mr27580825paa.65.1343685996575;
-        Mon, 30 Jul 2012 15:06:36 -0700 (PDT)
 Return-Path: <stega@stega.org>
-Received: from [192.168.1.102] (76-14-243-249.or.wavecable.com. [76.14.243.249])
-        by mx.google.com with ESMTPS id nv6sm8673237pbc.42.2012.07.30.15.06.12
-        (version=SSLv3 cipher=OTHER);
-        Mon, 30 Jul 2012 15:06:29 -0700 (PDT)
 Date: Mon, 30 Jul 2012 15:06:09 -0700
 Subject: Landscape picture
 Message-ID: <hs2v2bepmatlw4u2016igi1g.1343685969084@email.android.com>
-Importance: normal
 From: Stega <stega@stega.org>
 To: stega@stega.org
 Reply-To: Stega <stega@stega.org>

@@ -2,23 +2,8 @@ Return-Path: <stega@stega.org>
 Received: from mail-vc0-f172.google.com ([209.85.220.172] verified)
   by purgatory.org (CommuniGate Pro SMTP 5.2.14)
   with ESMTPS id 1776775 for stega@purgatory.org; Mon, 30 Jul 2012 15:54:21 -0700
-Received: by vcbfo14 with SMTP id fo14so5477364vcb.31
-        for <stega@purgatory.org>; Mon, 30 Jul 2012 15:54:19 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
-        d=gmail.com; s=20120113;
-        h=mime-version:date:message-id:subject:from:to:content-type;
-        bh=B/tlPAqTIlDmwdfrzHcC9C1AQ0xPfO5duS+XRDgcYp4=;
-        b=diKsGLrTDoCbVn6j4YQGh2dNI16vxAt9tKwlRLOjPWq4tlCfwEblPx/he8Jl1fRhK3
-         w8ItGfPJjVSbZRuRVEhfKTXk8CAIMQesS/w5Gms8K2kQoZRoX6Nvvdg999UHJuMBImh/
-         ivnGA4uTYCZFJYIwxIPV4FCd6/MCngsi8vpwaIroUzl7Nz189eev5+OTgGjko6cB7zZ7
-         puPCZ56kSyUUZQo3zCPjVbQggS4IgqMkna64KJJcRrEgyibZ/DjEP/tYyQ5SZviW4q/P
-         FBijCSf5BodZAtPceb2GguMHersbdJ8JVktXIWRjNcuiUcyRhsf0Ypucm7+BSwfsP4IB
-         s+vA==
 MIME-Version: 1.0
 Received: by 10.58.221.8 with SMTP id qa8mr750416vec.23.1343688859072; Mon, 30
- Jul 2012 15:54:19 -0700 (PDT)
-Received: by 10.220.147.135 with HTTP; Mon, 30 Jul 2012 15:54:18 -0700 (PDT)
-Received: by 10.220.147.135 with HTTP; Mon, 30 Jul 2012 15:54:18 -0700 (PDT)
 Date: Mon, 30 Jul 2012 18:54:18 -0400
 Message-ID: <CANfQrU2VN18fyvqV-_yyB8BK1TriMyW-kiLo-GgA8DXyT2+vGg@mail.gmail.com>
 Subject: Droid incredible - video clip

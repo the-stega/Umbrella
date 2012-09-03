@@ -4,39 +4,13 @@ Received: from smtpin126.mac.com ([10.150.68.126])
  64bit (built Aug 10 2011)) with ESMTP id <0LSB00AHB423Y3Z0@ms364.mac.com> for
  stega@mac.com; Thu, 29 Sep 2011 23:03:40 +0000 (GMT)
 Original-recipient: rfc822;stega@mac.com
-Received: from outbound-w10.bluehost.com ([69.89.16.137])
- by smtpin126.mac.com (Oracle Communications Messaging Server 7u4-23.01
- (7.0.4.23.0) 64bit (built Aug 10 2011))
- with SMTP id <0LSB009QJ420OFE0@smtpin126.mac.com> for stega@mac.com
- (ORCPT stega@mac.com); Thu, 29 Sep 2011 16:03:39 -0700 (PDT)
-X-Proofpoint-Virus-Version: vendor=fsecure
- engine=2.50.10432:5.4.6813,1.0.211,0.0.0000
- definitions=2011-09-29_06:2011-09-29,2011-09-29,1970-01-01 signatures=0
-X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 spamscore=0
- ipscore=0 suspectscore=22 phishscore=0 bulkscore=0 adultscore=0
- classifier=spam adjust=0 reason=mlx scancount=1 engine=6.0.2-1012030000
- definitions=main-1109290286
 Message-id: <0LSB009QM421OFE0@smtpin126.mac.com>
-Received: (qmail 6586 invoked by uid 0); Thu, 29 Sep 2011 23:03:35 +0000
-Received: from unknown (HELO box668.bluehost.com) (66.147.244.168)
- by mrclean.bluehost.com with SMTP; Thu, 29 Sep 2011 23:03:33 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=geekincreekans.com; s=default;
-	h=Content-Type:MIME-Version:Date:Subject:From:To;
- bh=5SukQqmC7oOf9kqooWI0DUC+uLtJyXf3tNOsdr2O5i0=;
-	b=NiAtZWsm4OuseGOm/WDcVfeYRmVsSMvKQgcn7SNyTeo2092rGT4/ba/VhVwDO8JqovR5ovOMK8s2Hm/Hr2FIsyEVqCLSQl6sUtHU/ZzLtXTpqdM8P5zsRJqS84Gzb3OE;
-Received: from [64.124.57.5] (helo=[192.168.0.38])	by box668.bluehost.com with
- esmtpsa (TLSv1:AES256-SHA:256)	(Exim 4.76)
-	(envelope-from <stega@stega.org)
-	id 1R9PdW-0002b5-CX	for stega@mac.com; Thu, 29 Sep 2011 17:03:33 -0600
-To: =?utf-8?B?TEMgQm9yb3M=?= <stega@mac.com>
-From: =?utf-8?B?U2VhbiBNY0xlYW4=?= <stega@stega.org>
-Subject: =?utf-8?B?UG9ydHJhaXQgb3JpZW50YXRpb24=?=
+To: <stega@mac.com>
+From: <stega@stega.org>
+Subject: Android Landscape Test Message 01
 Date: Thu, 29 Sep 2011 16:03:26 -0700
 MIME-version: 1.0
 Content-type: multipart/mixed; boundary="----=_Part_8_1317337406017"
-X-Identified-User: {1729:box668.bluehost.com:geekincr:geekincreekans.com}
- {sentby:smtp auth 64.124.57.5 authed with sean@geekincreekans.com}
 
 ------=_Part_8_1317337406017
 Content-Type: multipart/alternative;

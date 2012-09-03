@@ -8,6 +8,21 @@
 # Set Variables
 . umbrella/variables.txt
 # 
+# Check variables for changes
+if [ ! -d ${WORKDIR} ]
+then 
+	echo "WORKDIR is not set to an actual directory"
+	exit 1
+fi
+case ${PHONE} in 
+	"iphone" | "blackberry" | "android" | "other" )
+		;;
+	* )
+		echo "PHONE value is not set to something useful."	
+		exit 1
+		;;
+esac
+# 
 # Location for www files
 WEB=$WORKDIR
 #
@@ -23,9 +38,20 @@ mv magpierss-0.72 ${WEB}/
 (cd ${WEB} && ln -s magpierss-0.72 magpierss)
 (cd ${WEB} && mkdir images)
 (cd ${WEB} && mkdir movies)
+echo "I have put all the appropriate files in your WORKDIR location"
 cat www/index.php | sed -e "s%HOW_MANY%${HOW_MANY}%" -e "s%URL_REPLACE%${URL}%" -e "s%STYLESHEET_REPLACE%${STYLE}%" > ${WEB}/index.php
+echo "I have set the values for index.php and placed it in your WORKDIR"
 #
 # Now run the test cases to be sure the basics are working (will fail if iphone is not the selected type--will add additional test cases for release)
-#sh umbrella/umbrella.sh < samples/iphone/iphone-test-01.eml
-#sh umbrella/umbrella.sh < samples/iphone/iphone-test-02.eml
-#sh umbrella/umbrella.sh < samples/iphone/iphone-test-vid.eml
+case ${PHONE} in 
+	"iphone" )
+		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-test-01.eml)
+		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-test-02.eml)
+		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-test-vid.eml)
+		echo "I have successfully run the iPhone test cases. You should be able to view WORKDIR/index.php from a web browser"
+		;;	
+	* )
+		echo "Did not run test cases."
+		;;
+esac
+echo "Please run your own samples through now"
