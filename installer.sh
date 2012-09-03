@@ -45,8 +45,8 @@ echo "I have set the values for index.php and placed it in your WORKDIR"
 # Now run the test cases to be sure the basics are working (will fail if iphone is not the selected type--will add additional test cases for release)
 case ${PHONE} in 
 	"iphone" )
-		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-landscape-image-02-actual.eml)
-		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-image-02-actual.eml)
+		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-landscape-image-02-medium.eml)
+		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-image-02-medium.eml)
 		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-vid.eml) 
 		echo "I have successfully run the iPhone test cases. You should be able to view WORKDIR/index.php from a web browser"
 		;;	
