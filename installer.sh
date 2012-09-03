@@ -26,6 +26,6 @@ mv magpierss-0.72 ${WEB}/
 cat www/index.php | sed -e "s%HOW_MANY%${HOW_MANY}%" -e "s%URL_REPLACE%${URL}%" -e "s%STYLESHEET_REPLACE%${STYLE}%" > ${WEB}/index.php
 #
 # Now run the test cases to be sure the basics are working (will fail if iphone is not the selected type--will add additional test cases for release)
-sh umbrella/umbrella.sh < samples/iphone/iphone-test-01.eml
-sh umbrella/umbrella.sh < samples/iphone/iphone-test-02.eml
-sh umbrella/umbrella.sh < samples/iphone/iphone-test-vid.eml
+#sh umbrella/umbrella.sh < samples/iphone/iphone-test-01.eml
+#sh umbrella/umbrella.sh < samples/iphone/iphone-test-02.eml
+#sh umbrella/umbrella.sh < samples/iphone/iphone-test-vid.eml
