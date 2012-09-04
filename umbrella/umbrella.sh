@@ -10,7 +10,28 @@
 . device/${PHONE}.sh
 . write-xml.sh
 
+#This is for FreeBSD	
+LOCK_STUFF () {
+	while true ; do 
+		if lockf -k -t5 /tmp/umbrella.lock true ; then 
+			echo "Removing stale lockfile."
+			UNLOCK_STUFF
+			continue
+		else
+			echo "Made a lockfile."	
+			break
+	done
+}
+
+UNLOCK_STUFF () {
+	rm /tmp/umbrella.lock
+}
+
+
 cd ${WORKDIR}
+
+LOCK_STUFF
+
 # Spam the message on standard input into a scratch file. Pull out the subject header field, then explode the message into its various parts.
 TEMPFILE=`mktemp ${TEMP_TEMPLATE}`
 cat > ${TEMPFILE}
@@ -31,3 +52,5 @@ else
 fi
 
 CLEAN_XML_WRITE
+
+UNLOCK_STUFF 
