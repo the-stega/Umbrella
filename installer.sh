@@ -8,6 +8,17 @@
 # Set Variables
 . umbrella/variables.txt
 # 
+#
+#Check to see if WORKDIR already exists and ask if it should be removed
+if [ -d "$WORKDIR" ]
+then
+	echo "WORKDIR already present.  Please remove it and try again."
+	exit
+#	echo "WORKDIR already present.  Should it be overwritten? (y/n)"
+else [
+	]
+fi	
+
 # Check variables for changes
 if [ ${WORKDIR}x = "/FULLPATH_TO_SITE/Umbrella"x ]
 then 
