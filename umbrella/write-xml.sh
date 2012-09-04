@@ -73,5 +73,4 @@ CLEAN_XML_WRITE(){
     echo "</channel>" >> ${WORKDIR}/feed.xml
     echo "</rss>" >> ${WORKDIR}/feed.xml
     # done
-    exit 0 
 }
