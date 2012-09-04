@@ -12,9 +12,16 @@
 #Check to see if WORKDIR already exists and ask if it should be removed
 if [ -d "$WORKDIR" ]
 then
-	echo "WORKDIR already present.  Please remove it and try again."
-	exit
-#	echo "WORKDIR already present.  Should it be overwritten? (y/n)"
+#	echo "WORKDIR already present.  Please remove it and try again."
+	echo "WORKDIR already present.  Should it be overwritten?"
+#   printf 
+	read -p "(y/n)\n"  ans
+	if [ "$ans" == "y" ]
+	then 
+		rm -rf ${WORKDIR}
+	else
+		exit	
+	fi	
 else [
 	]
 fi	
