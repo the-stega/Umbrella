@@ -2,7 +2,7 @@
 #iPhone support
 
 DO_FILE() {
-    if [ -f ${WORKDIR}/photo.JPG ]; then
+    if [ -f ${SCRATCH_DIR}/photo.JPG ]; then
         JPG_OUTPUT
         MODE=image
     else
@@ -14,14 +14,14 @@ DO_FILE() {
 JPG_OUTPUT() { 
 #subroutine for manipulating inbound images
     # The name and format of the imagesge may vary.  
-    /bin/cp ${WORKDIR}/photo.JPG ${WORKDIR}/photoX1X.jpg 2> /dev/null
+    /bin/cp ${SCRATCH_DIR}/photo.JPG ${SCRATCH_DIR}/photoX1X.jpg 2> /dev/null
     # If something is broken: it will use the placeholder image.
-    if [ ! -f ${WORKDIR}/photoX1X.jpg ]
+    if [ ! -f ${SCRATCH_DIR}/photoX1X.jpg ]
     then
-	   cp ${WORKDIR}/placeholder.jpg ${WORKDIR}/photoX1X.jpg;
+	   cp ${SCRATCH_DIR}/placeholder.jpg ${SCRATCH_DIR}/photoX1X.jpg;
     fi
     # Otherwise it's going to use the nice new image
-    chmod 744 ${WORKDIR}/photoX1X.jpg
+    chmod 744 ${SCRATCH_DIR}/photoX1X.jpg
 
     # Due to changes in how iPhones save images, we now need to pull 
     # out the Orientation from the EXIF data
@@ -55,26 +55,26 @@ JPG_OUTPUT() {
             ;;
     esac
 # In addition to saving it to a permanent file named by the timestamp, it will also copy it to the current top image This is handy if you want to have a splash page that just links to the most current image
-    cp ${WORKDIR}/photoX1X.jpg ${WORKDIR}/current-mblog.jpg
-    chmod 755 ${WORKDIR}/current-mblog.jpg 
-    mv ${WORKDIR}/photoX1X.jpg ${WORKDIR}/images/${TIMESTAMP}.jpg
-    /bin/rm ${WORKDIR}/photo* 2> /dev/null
+    cp ${SCRATCH_DIR}/photoX1X.jpg ${SCRATCH_DIR}/current-mblog.jpg
+    chmod 755 ${SCRATCH_DIR}/current-mblog.jpg 
+    mv ${SCRATCH_DIR}/photoX1X.jpg ${WORKDIR}/images/${UNQID}.jpg
+    /bin/rm ${SCRATCH_DIR}/photo* 2> /dev/null
 
-    OUTPUT_FILE=${TIMESTAMP}.jpg
+    OUTPUT_FILE=${UNQID}.jpg
 }
 
 MOV_OUTPUT(){ 
 # subroutine to manipulate the inbound movie file.
-    /bin/cp ${WORKDIR}/IMG_*.MOV ${WORKDIR}/IMGMOV_X1X.mov 2> /dev/null
+    /bin/cp ${SCRATCH_DIR}/IMG_*.MOV ${SCRATCH_DIR}/IMGMOV_X1X.mov 2> /dev/null
     # If something is broken: it will use the placeholder image.
-    if [ ! -f ${WORKDIR}/IMGMOV_X1X.mov ]
+    if [ ! -f ${SCRATCH_DIR}/IMGMOV_X1X.mov ]
     then
-        cp ${WORKDIR}/placeholder.jpg ${WORKDIR}/IMGMOV_X1X.mov
+        cp ${SCRATCH_DIR}/placeholder.jpg ${SCRATCH_DIR}/IMGMOV_X1X.mov
     fi
     # Otherwise it is going to use the nice new movie  
-    chmod 744 ${WORKDIR}/IMGMOV_X1X.mov
-    mv ${WORKDIR}/IMGMOV_X1X.mov ${WORKDIR}/movies/${TIMESTAMP}.mov
-    /bin/rm ${WORKDIR}/IMG* 2> /dev/null
+    chmod 744 ${SCRATCH_DIR}/IMGMOV_X1X.mov
+    mv ${SCRATCH_DIR}/IMGMOV_X1X.mov ${WORKDIR}/movies/${UNQID}.mov
+    /bin/rm ${SCRATCH_DIR}/IMG* 2> /dev/null
 
-    OUTPUT_FILE=${TIMESTAMP}.mov
+    OUTPUT_FILE=${UNQID}.mov
 }
