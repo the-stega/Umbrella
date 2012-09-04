@@ -20,6 +20,7 @@ then
 	then 
 		rm -rf ${WORKDIR}
 	else
+		echo "You selected no, so I will now exit."
 		exit	
 	fi	
 else [
