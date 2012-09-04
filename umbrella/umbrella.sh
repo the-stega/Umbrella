@@ -12,11 +12,20 @@
 
 #This is for FreeBSD	
 LOCK_STUFF () {
+	retries=5
 	while true ; do 
-		if lockf -k -t5 /tmp/umbrella.lock true ; then 
-			echo "Removing stale lockfile."
-			UNLOCK_STUFF
-			continue
+		if mktemp /tmp/umbrella.lock
+		then 
+			if [ $retries -eq 0 ]		
+			then
+				echo "Removing stale lockfile."	
+				UNLOCK_STUFF
+				continue
+			else	
+				echo "Waiting for lockfile"
+				sleep 1
+				retries=`expr $retries - 1`
+			fi		
 		else
 			echo "Made a lockfile."	
 			break
