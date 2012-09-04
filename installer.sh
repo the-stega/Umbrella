@@ -16,7 +16,7 @@ then
 	echo "WORKDIR already present.  Should it be overwritten? (y or n)"
 #   printf 
 	read ans
-	if [ "$ans" == "y" ]
+	if [ "$ans" = "y" ]
 	then 
 		rm -rf ${WORKDIR}
 	else
