@@ -13,9 +13,9 @@
 if [ -d "$WORKDIR" ]
 then
 #	echo "WORKDIR already present.  Please remove it and try again."
-	echo "WORKDIR already present.  Should it be overwritten?"
+	echo "WORKDIR already present.  Should it be overwritten? (y or n)"
 #   printf 
-	read -p "(y/n)"  ans
+	read ans
 	if [ "$ans" == "y" ]
 	then 
 		rm -rf ${WORKDIR}
