@@ -18,7 +18,7 @@ JPG_OUTPUT() {
     # If something is broken: it will use the placeholder image.
     if [ ! -f ${SCRATCH_DIR}/photoX1X.jpg ]
     then
-	   cp ${WORKDIR}/placeholder.jpg ${SCRATCH_DIR}/photoX1X.jpg;
+	   cp ${SCRATCH_DIR}/placeholder.jpg ${SCRATCH_DIR}/photoX1X.jpg;
     fi
     # Otherwise it's going to use the nice new image
     chmod 744 ${SCRATCH_DIR}/photoX1X.jpg
@@ -69,7 +69,7 @@ MOV_OUTPUT(){
     # If something is broken: it will use the placeholder image.
     if [ ! -f ${SCRATCH_DIR}/IMGMOV_X1X.mov ]
     then
-        cp ${WORKDIR}/placeholder.jpg ${SCRATCH_DIR}/IMGMOV_X1X.mov
+        cp ${SCRATCH_DIR}/placeholder.jpg ${SCRATCH_DIR}/IMGMOV_X1X.mov
     fi
     # Otherwise it is going to use the nice new movie  
     chmod 744 ${SCRATCH_DIR}/IMGMOV_X1X.mov

@@ -14,7 +14,7 @@ SCRATCH_DIR=`mktemp -d ${SCRATCH_DIR_TEMPLATE}`
 cd ${SCRATCH_DIR}
 # Spam the message on standard input into a scratch file. Pull out the subject header field, then explode the message into its various parts.
 
-TEMPFILE=incoming.temp
+TEMPFILE=`mktemp ${TEMP_TEMPLATE}`
 cat > ${TEMPFILE}
 SUBJECT=`grep -i \^subject: ${TEMPFILE} | cut -c 10-100`
 ${MUNPACK} -q < ${TEMPFILE} > /dev/null 2> /dev/null

@@ -51,6 +51,7 @@ TITLESTAMP=`/bin/date '+%a-%d-%b-%Y-%H:%M'`
 
 #use for pubDate and lastBuild
 DCSTAMP=`/bin/date '+%a, %d %b %Y %H:%M:%S'` 
+TEMP_TEMPLATE=${WORKDIR}/umbrella-mail.XXXXXX
 
 # These may need set if you have things installed elsewhere
 MUNPACK="/usr/local/bin/munpack"
@@ -59,4 +60,3 @@ EXIFPROBE="/usr/local/bin/exifprobe"
 
 # Other variables:  these should not be changed.
 SCRATCH_DIR_TEMPLATE=${WORKDIR}/scratch.XXXXXX
-#TEMP_TEMPLATE=umbrella-mail.XXXXXX
