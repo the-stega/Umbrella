@@ -20,6 +20,7 @@ LOCK_STUFF () {
 		else
 			echo "Made a lockfile."	
 			break
+		fi	
 	done
 }
 
