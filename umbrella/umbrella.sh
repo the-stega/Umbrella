@@ -10,15 +10,13 @@
 . device/${PHONE}.sh
 . write-xml.sh
 
-SCRATCH_DIR=`mktemp -d ${SCRATCH_DIR_TEMPLATE}`
-cd ${SCRATCH_DIR}
+cd ${WORKDIR}
 # Spam the message on standard input into a scratch file. Pull out the subject header field, then explode the message into its various parts.
-
 TEMPFILE=`mktemp ${TEMP_TEMPLATE}`
 cat > ${TEMPFILE}
 SUBJECT=`grep -i \^subject: ${TEMPFILE} | cut -c 10-100`
 ${MUNPACK} -q < ${TEMPFILE} > /dev/null 2> /dev/null
-echo $SUBJECT > ${SCRATCH_DIR}/${UNQID}.title
+echo $SUBJECT > ${WORKDIR}/${TIMESTAMP}.title
 rm -f ${TEMPFILE} 
 
 # Ask the phone-specific logic to work out what it's done
@@ -33,5 +31,3 @@ else
 fi
 
 CLEAN_XML_WRITE
-
-# rm -rf ${SCRATCH_DIR}
