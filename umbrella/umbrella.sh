@@ -35,6 +35,7 @@ LOCK_STUFF () {
 
 UNLOCK_STUFF () {
 	rm /tmp/umbrella.lock
+	echo "Removing current lockfile."	
 }
 
 
