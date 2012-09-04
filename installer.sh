@@ -47,10 +47,8 @@ case ${PHONE} in
 	"iphone" )
 		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-landscape-image-02-medium.eml)
 		echo "I have successfully run the first test case (landscape)"
-		sleep 1
 		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-image-02-medium.eml)
 		echo "I have successfully run the first test case (portrait)"
-		sleep 1
 		(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-vid.eml) 
 		echo "I have successfully run the iPhone video test case. You should be able to view WORKDIR/index.php from a web browser"
 		;;	
