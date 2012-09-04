@@ -16,6 +16,9 @@ LOCK_STUFF () {
 	while true ; do 
 		if mktemp /tmp/umbrella.lock
 		then 
+			echo "Made a lockfile."	
+			break
+		else
 			if [ $retries -eq 0 ]		
 			then
 				echo "Removing stale lockfile."	
@@ -26,9 +29,6 @@ LOCK_STUFF () {
 				sleep 1
 				retries=`expr $retries - 1`
 			fi		
-		else
-			echo "Made a lockfile."	
-			break
 		fi	
 	done
 }
