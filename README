@@ -18,7 +18,7 @@ v2.0 added ability to rotate image based on EXIF data in image as due to changes
 v3.0 added support for other phones and made it a bit more user friendly.  Added the installer script.
 
 
-Requirements: mpack, jpegtran and exifprobe.  You also need to be able to pipe/filter your email to the umbrella.sh script. All three utilities are available via the FreeBSD ports/pkg utilities.  For other operating systems, please check accordingly. 
+Requirements: mpack, jpegtran and exifprobe.  You also need to be able to pipe/filter your email to the it. All three utilities are available via the FreeBSD ports/pkg utilities.  For other operating systems, please check accordingly. 
 
 To use this script:  
 1) Place the Umbrella directory in a directory that is not within /home/www or where ever your website lives.  Your home directory is a good choice.
@@ -41,7 +41,9 @@ The install.sh script does the following:
 ##########################
 Wishlist for future updates:
 Geo EXIF Data inclusion
-Auto-detect source
+Trackback link
+Orientation check for non-iphone
+size manipulation
 ##########################
 
 
