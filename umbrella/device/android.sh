@@ -16,7 +16,8 @@ JPG_OUTPUT() {
     # The name and format of the imagesge may vary.  
     /bin/cp ${WORKDIR}/photo.JPG ${WORKDIR}/photoX1X.jpg 2> /dev/null
     # If something is broken: it will use the placeholder image.
-    if [ ! -f ${WORKDIR}/photoX1X.jpg ]; then
+    if [ ! -f ${WORKDIR}/photoX1X.jpg ]
+    then
 	   cp ${WORKDIR}/placeholder.jpg ${WORKDIR}/photoX1X.jpg;
     fi
     # Otherwise it's going to use the nice new image
@@ -66,7 +67,8 @@ MOV_OUTPUT(){
 # subroutine to manipulate the inbound movie file.
     /bin/cp ${WORKDIR}/IMG_*.MOV ${WORKDIR}/IMGMOV_X1X.mov 2> /dev/null
     # If something is broken: it will use the placeholder image.
-    if [ ! -f ${WORKDIR}/IMGMOV_X1X.mov ] then
+    if [ ! -f ${WORKDIR}/IMGMOV_X1X.mov ] 
+    then
         cp ${WORKDIR}/placeholder.jpg ${WORKDIR}/IMGMOV_X1X.mov
     fi
     # Otherwise it is going to use the nice new movie  
