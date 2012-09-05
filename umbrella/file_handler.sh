@@ -4,21 +4,21 @@
 DO_FILE() {
     FILETYPE=`/usr/bin/file -bi ${LARGEFILE}`
     case $FILETYPE in
-        "image/jpeg" )
+        " image/jpeg " )
             JPG_OUTPUT
             MODE=image
             ;;
-         "video/3gpp" )
+         " video/3gpp " )
             MOV_SUFF=3gp
             MOV_OUTPUT
             MODE=movie 
             ;;
-         "video/quicktime" )
+         " video/quicktime " )
             MOV_SUFF=mov
             MOV_OUTPUT
             MODE=movie 
             ;;
-          * )
+          *)
             echo "I have no idea what this is."  
             LARGEFILE=${WORKDIR}/scratch/placeholder.jpg
             SUBJECT=`cat ${WORKDIR}/placeholder.txt`
