@@ -7,10 +7,6 @@
 WORKDIR="/home/www/Sites/stega.org/htdocs/Umbrella" 
 #WORKDIR="/FULLPATH_TO_SITE/Umbrella" 
 #
-#Type of phone: iphone, android, blackberry, or other
-PHONE=android
-#PHONE=CHANGE_ME
-#
 # Configure your absolute/FQd URL for the above directory (no trailing /)
 URL="http://www.stega.org/Umbrella"
 #URL="http://www.yourdomain.com/Ubrella/"
