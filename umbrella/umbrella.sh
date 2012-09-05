@@ -76,6 +76,6 @@ fi
 
 CLEAN_XML_WRITE
 
-rm -rf ${WORKDIR}/scratch
+#rm -rf ${WORKDIR}/scratch
 
 UNLOCK_STUFF 
