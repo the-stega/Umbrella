@@ -1,8 +1,16 @@
 #!/bin/sh
 #Android support
+RENAME_IMG() {
+    if if [ -f ${WORKDIR}/\= ]
+
+
+
+
+}
+
 
 DO_FILE() {
-    if [ -f ${WORKDIR}/photo.JPG ]; then
+    if [ -f ${WORKDIR}/.JPG ]; then
         JPG_OUTPUT
         MODE=image
     else

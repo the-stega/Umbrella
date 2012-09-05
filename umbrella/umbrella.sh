@@ -59,7 +59,7 @@ XML_Header
 if [ ${MODE}x = "imagex" ]; then
 	XML_IMAGE ${OUTPUT_FILE}
 else
-	XML_MOVIE ${OUTPUT_FILE}
+	XML_MOVIE_${PHONE} ${OUTPUT_FILE}
 fi
 
 CLEAN_XML_WRITE
