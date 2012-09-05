@@ -72,9 +72,8 @@ case ${PHONE} in
 		sleep 1
 		echo "I have successfully run the iPhone test cases. You should be able to view WORKDIR/index.php from a web browser"
 		;;	
-	* )
+
 	"andoid" )
-		
 		echo "Done with install"
 		;;	
 	* )		
