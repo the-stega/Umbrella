@@ -73,7 +73,10 @@ case ${PHONE} in
 		echo "I have successfully run the iPhone test cases. You should be able to view WORKDIR/index.php from a web browser"
 		;;	
 	* )
-		echo "Did not run test cases."
-		;;
+	"andoid" )
+		
+		echo "Done with install"
+		;;	
+	* )		
 esac
 echo "Please run your own samples through now"
