@@ -24,7 +24,6 @@ XML_IMAGE(){
     echo "alt=&quot;${TITLESTAMP} `/bin/cat ${WORKDIR}/${TIMESTAMP}.title`&quot;&gt;" >> ${WORKDIR}/new.xml
     echo "</description>" >> ${WORKDIR}/new.xml
     echo "<guid>${URL}/images/${TIMESTAMP}.jpg</guid>" >> ${WORKDIR}/new.xml 
-#    echo "<guid>${URL}/images/$1</guid>" >> ${WORKDIR}/new.xml 
     echo "<author>${EMAIL}</author>" >> ${WORKDIR}/new.xml
     echo "<pubDate>${DCSTAMP} ${TZ}</pubDate>" >> ${WORKDIR}/new.xml
     echo "</item>" >> ${WORKDIR}/new.xml
@@ -33,7 +32,7 @@ XML_IMAGE(){
 #
 # subroutine to build xml for movies
 #
-XML_MOVIE(){ 
+XML_MOVIE_iphone(){ 
     echo "<item>" >> ${WORKDIR}/new.xml
     echo "<title>${TITLESTAMP}" `/bin/cat ${WORKDIR}/${TIMESTAMP}.title` "</title>" >>  ${WORKDIR}/new.xml
     echo "<link>${URL}/index.php</link>" >> ${WORKDIR}/new.xml
@@ -48,7 +47,29 @@ XML_MOVIE(){
     echo "</object>" >> ${WORKDIR}/new.xml
     echo "<noembed>" >> ${WORKDIR}/new.xml
     echo "<a href=\"${URL}/movies/${TIMESTAMP}.mov\">Watch the movie...</a>" >> ${WORKDIR}/new.xml
-#    echo "<a href=\"${URL}/movies/$1\">Watch the movie...</a>" >> ${WORKDIR}/new.xml
+    echo "</noembed>]]>" >> ${WORKDIR}/new.xml
+    echo "</description>" >> ${WORKDIR}/new.xml
+    echo "<guid>${URL}/movies/${TIMESTAMP}.mov</guid>" >> ${WORKDIR}/new.xml 
+    echo "<author>${EMAIL}</author>" >> ${WORKDIR}/new.xml
+    echo "<pubDate>${DCSTAMP} ${TZ}</pubDate>" >> ${WORKDIR}/new.xml
+    echo "</item>"  >> ${WORKDIR}/new.xml
+}
+
+XML_MOVIE_android(){ 
+    echo "<item>" >> ${WORKDIR}/new.xml
+    echo "<title>${TITLESTAMP}" `/bin/cat ${WORKDIR}/${TIMESTAMP}.title` "</title>" >>  ${WORKDIR}/new.xml
+    echo "<link>${URL}/index.php</link>" >> ${WORKDIR}/new.xml
+    echo "<description>" >> ${WORKDIR}/new.xml
+    echo "<![CDATA[ <object width=\"500\" height=\"500\">" >> ${WORKDIR}/new.xml
+    echo "<param name=\"movie\" value=\"${URL}/movies/${TIMESTAMP}.3gp\">" >> ${WORKDIR}/new.xml 
+    echo "</param>" >> ${WORKDIR}/new.xml
+    echo "<param name=\"autoplay\" value=\"false\">" >> ${WORKDIR}/new.xml
+    echo "</param>" >> ${WORKDIR}/new.xml
+    echo "<embed src=\"${URL}/movies/${TIMESTAMP}.3gp\" type=\"application/quicktime\" wmode=\"transparent\" width=\"500\" height=\"500\">" >> ${WORKDIR}/new.xml
+    echo "</embed>" >> ${WORKDIR}/new.xml
+    echo "</object>" >> ${WORKDIR}/new.xml
+    echo "<noembed>" >> ${WORKDIR}/new.xml
+    echo "<a href=\"${URL}/movies/${TIMESTAMP}.3gp\">Watch the movie...</a>" >> ${WORKDIR}/new.xml
     echo "</noembed>]]>" >> ${WORKDIR}/new.xml
     echo "</description>" >> ${WORKDIR}/new.xml
     echo "<guid>${URL}/movies/${TIMESTAMP}.mov</guid>" >> ${WORKDIR}/new.xml 
@@ -69,7 +90,6 @@ CLEAN_XML_WRITE(){
     XML_Header >> ${WORKDIR}/feed.xml
     /bin/cat ${WORKDIR}/old.xml >> ${WORKDIR}/feed.xml
     #close out the xml
-    #echo "<atom:link href=\"${URL}/feed.xml\" rel=\"self\" type=\"application/rss+xml\">"
     echo "</channel>" >> ${WORKDIR}/feed.xml
     echo "</rss>" >> ${WORKDIR}/feed.xml
     # done
