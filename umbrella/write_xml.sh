@@ -32,51 +32,29 @@ XML_IMAGE(){
 #
 # subroutine to build xml for movies
 #
-XML_MOVIE_iphone(){ 
+XML_MOVIE(){ 
     echo "<item>" >> ${WORKDIR}/new.xml
     echo "<title>${TITLESTAMP}" `/bin/cat ${WORKDIR}/${TIMESTAMP}.title` "</title>" >>  ${WORKDIR}/new.xml
     echo "<link>${URL}/index.php</link>" >> ${WORKDIR}/new.xml
     echo "<description>" >> ${WORKDIR}/new.xml
     echo "<![CDATA[ <object width=\"500\" height=\"500\">" >> ${WORKDIR}/new.xml
-    echo "<param name=\"movie\" value=\"${URL}/movies/${TIMESTAMP}.mov\">" >> ${WORKDIR}/new.xml 
+    echo "<param name=\"movie\" value=\"${URL}/movies/${TIMESTAMP}.${MOV_SUFF}\">" >> ${WORKDIR}/new.xml 
     echo "</param>" >> ${WORKDIR}/new.xml
     echo "<param name=\"autoplay\" value=\"false\">" >> ${WORKDIR}/new.xml
     echo "</param>" >> ${WORKDIR}/new.xml
-    echo "<embed src=\"${URL}/movies/${TIMESTAMP}.mov\" type=\"application/quicktime\" wmode=\"transparent\" width=\"500\" height=\"500\">" >> ${WORKDIR}/new.xml
+    echo "<embed src=\"${URL}/movies/${TIMESTAMP}.${MOV_SUFF}\" type=\"application/quicktime\" wmode=\"transparent\" width=\"500\" height=\"500\">" >> ${WORKDIR}/new.xml
     echo "</embed>" >> ${WORKDIR}/new.xml
     echo "</object>" >> ${WORKDIR}/new.xml
     echo "<noembed>" >> ${WORKDIR}/new.xml
-    echo "<a href=\"${URL}/movies/${TIMESTAMP}.mov\">Watch the movie...</a>" >> ${WORKDIR}/new.xml
+    echo "<a href=\"${URL}/movies/${TIMESTAMP}.${MOV_SUFF}\">Watch the movie...</a>" >> ${WORKDIR}/new.xml
     echo "</noembed>]]>" >> ${WORKDIR}/new.xml
     echo "</description>" >> ${WORKDIR}/new.xml
-    echo "<guid>${URL}/movies/${TIMESTAMP}.mov</guid>" >> ${WORKDIR}/new.xml 
+    echo "<guid>${URL}/movies/${TIMESTAMP}.${MOV_SUFF}</guid>" >> ${WORKDIR}/new.xml 
     echo "<author>${EMAIL}</author>" >> ${WORKDIR}/new.xml
     echo "<pubDate>${DCSTAMP} ${TZ}</pubDate>" >> ${WORKDIR}/new.xml
     echo "</item>"  >> ${WORKDIR}/new.xml
 }
 
-XML_MOVIE_android(){ 
-    echo "<item>" >> ${WORKDIR}/new.xml
-    echo "<title>${TITLESTAMP}" `/bin/cat ${WORKDIR}/${TIMESTAMP}.title` "</title>" >>  ${WORKDIR}/new.xml
-    echo "<link>${URL}/index.php</link>" >> ${WORKDIR}/new.xml
-    echo "<description>" >> ${WORKDIR}/new.xml
-    echo "<![CDATA[ <object width=\"500\" height=\"500\">" >> ${WORKDIR}/new.xml
-    echo "<param name=\"movie\" value=\"${URL}/movies/${TIMESTAMP}.3gp\">" >> ${WORKDIR}/new.xml 
-    echo "</param>" >> ${WORKDIR}/new.xml
-    echo "<param name=\"autoplay\" value=\"false\">" >> ${WORKDIR}/new.xml
-    echo "</param>" >> ${WORKDIR}/new.xml
-    echo "<embed src=\"${URL}/movies/${TIMESTAMP}.3gp\" type=\"application/quicktime\" wmode=\"transparent\" width=\"500\" height=\"500\">" >> ${WORKDIR}/new.xml
-    echo "</embed>" >> ${WORKDIR}/new.xml
-    echo "</object>" >> ${WORKDIR}/new.xml
-    echo "<noembed>" >> ${WORKDIR}/new.xml
-    echo "<a href=\"${URL}/movies/${TIMESTAMP}.3gp\">Watch the movie...</a>" >> ${WORKDIR}/new.xml
-    echo "</noembed>]]>" >> ${WORKDIR}/new.xml
-    echo "</description>" >> ${WORKDIR}/new.xml
-    echo "<guid>${URL}/movies/${TIMESTAMP}.mov</guid>" >> ${WORKDIR}/new.xml 
-    echo "<author>${EMAIL}</author>" >> ${WORKDIR}/new.xml
-    echo "<pubDate>${DCSTAMP} ${TZ}</pubDate>" >> ${WORKDIR}/new.xml
-    echo "</item>"  >> ${WORKDIR}/new.xml
-}
 
 CLEAN_XML_WRITE(){ 
 #clean up and make the old feed the new feed etc

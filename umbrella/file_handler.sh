@@ -1,22 +1,31 @@
 #!/bin/sh
-#Android support
-RENAME_IMG() {
-    if if [ -f ${WORKDIR}/\= ]
-
-
-
-
-}
-
+#iPhone support
 
 DO_FILE() {
-    if [ -f ${WORKDIR}/.JPG ]; then
-        JPG_OUTPUT
-        MODE=image
-    else
-        MOV_OUTPUT
-        MODE=movie
-    fi
+    FILETYPE=`/usr/bin/file -bi ${LARGEFILE}`
+    case $FILETYPE in
+        image/jpeg )
+            JPG_OUTPUT
+            MODE=image
+            ;;
+         video/3gpp )
+            MOV_SUFF=3gp
+            MOV_OUTPUT
+            MODE=movie 
+            ;;
+         video/quicktime )
+            MOV_SUFF=mov
+            MOV_OUTPUT
+            MODE=movie 
+            ;;
+          * )
+            echo "I have no idea what this is."  
+            LARGEFILE=${WORKDIR}/scratch/placeholder.jpg
+            SUBJECT=`cat ${WORKDIR}/placeholder.txt`
+            JPG_OUTPUT
+            MODE=image
+            ;;
+    esac
 }
 
 JPG_OUTPUT() { 
@@ -73,16 +82,9 @@ JPG_OUTPUT() {
 
 MOV_OUTPUT(){ 
 # subroutine to manipulate the inbound movie file.
-    /bin/cp ${WORKDIR}/IMG_*.MOV ${WORKDIR}/IMGMOV_X1X.mov 2> /dev/null
-    # If something is broken: it will use the placeholder image.
-    if [ ! -f ${WORKDIR}/IMGMOV_X1X.mov ] 
-    then
-        cp ${WORKDIR}/placeholder.jpg ${WORKDIR}/IMGMOV_X1X.mov
-    fi
-    # Otherwise it is going to use the nice new movie  
-    chmod 744 ${WORKDIR}/IMGMOV_X1X.mov
-    mv ${WORKDIR}/IMGMOV_X1X.mov ${WORKDIR}/movies/${TIMESTAMP}.mov
-    /bin/rm ${WORKDIR}/IMG* 2> /dev/null
-
-    OUTPUT_FILE=${TIMESTAMP}.mov
+     
+     /bin/cp ${LARGEFILE} ${WORKDIR}/movies/${TIMESTAMP}.${MOV_SUFF} 2> /dev/null   
+     chmod 744 ${WORKDIR}/movies/${TIMESTAMP}.${MOV_SUFF}
+     OUTPUT_FILE=${TIMESTAMP}.${MOV_SUFF}
 }
+
