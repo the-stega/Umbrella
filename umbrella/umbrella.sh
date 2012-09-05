@@ -7,8 +7,8 @@
 #
 # Import the variable file
 . variables.txt
-. device/${PHONE}.sh
-. write-xml.sh
+. file_handler.sh
+. write_xml.sh
 
 #This is for FreeBSD	
 LOCK_STUFF () {
@@ -56,6 +56,13 @@ echo $SUBJECT > ${WORKDIR}/${TIMESTAMP}.title
 
 rm -f ${TEMPFILE} 
 
+#If Munpack finds no files:  use the place holder
+if [ $LARGEFILEx = x ]
+then
+	LARGEFILE=${WORKDIR}/scratch/placeholder.jpg
+	SUBJECT=`cat ${WORKDIR}/placeholder.txt`
+fi
+
 # Ask the phone-specific logic to work out what it's done
 DO_FILE
 
@@ -64,7 +71,7 @@ XML_Header
 if [ ${MODE}x = "imagex" ]; then
 	XML_IMAGE ${OUTPUT_FILE}
 else
-	XML_MOVIE_${PHONE} ${OUTPUT_FILE}
+	XML_MOVIE ${OUTPUT_FILE}
 fi
 
 CLEAN_XML_WRITE
