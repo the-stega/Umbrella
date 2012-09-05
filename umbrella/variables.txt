@@ -8,7 +8,7 @@ WORKDIR="/home/www/Sites/stega.org/htdocs/Umbrella"
 #WORKDIR="/FULLPATH_TO_SITE/Umbrella" 
 #
 #Type of phone: iphone, android, blackberry, or other
-PHONE=iphone
+PHONE=android
 #PHONE=CHANGE_ME
 #
 # Configure your absolute/FQd URL for the above directory (no trailing /)
