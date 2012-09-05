@@ -31,14 +31,14 @@ DO_FILE() {
 JPG_OUTPUT() { 
 #subroutine for manipulating inbound images
     # The name and format of the imagesge may vary.  
-    /bin/cp ${WORKDIR}/photo.JPG ${WORKDIR}/photoX1X.jpg 2> /dev/null
+    /bin/cp ${LARGEFILE} photoX1X.jpg 2> /dev/null
     # If something is broken: it will use the placeholder image.
-    if [ ! -f ${WORKDIR}/photoX1X.jpg ]
+    if [ ! -f photoX1X.jpg ]
     then
-	   cp ${WORKDIR}/placeholder.jpg ${WORKDIR}/photoX1X.jpg;
+	   cp placeholder.jpg photoX1X.jpg;
     fi
     # Otherwise it's going to use the nice new image
-    chmod 744 ${WORKDIR}/photoX1X.jpg
+    chmod 744 photoX1X.jpg
 
     # Due to changes in how iPhones save images, we now need to pull 
     # out the Orientation from the EXIF data
@@ -72,11 +72,10 @@ JPG_OUTPUT() {
             ;;
     esac
 # In addition to saving it to a permanent file named by the timestamp, it will also copy it to the current top image This is handy if you want to have a splash page that just links to the most current image
-    cp ${WORKDIR}/photoX1X.jpg ${WORKDIR}/current-mblog.jpg
-    chmod 755 ${WORKDIR}/current-mblog.jpg 
-    mv ${WORKDIR}/photoX1X.jpg ${WORKDIR}/images/${TIMESTAMP}.jpg
-    /bin/rm ${WORKDIR}/photo* 2> /dev/null
-
+    cp photoX1X.jpg ${WORKDIR}/current-mblog.jpg
+    chmod 755 current-mblog.jpg 
+    mv photoX1X.jpg ${WORKDIR}/images/${TIMESTAMP}.jpg
+  
     OUTPUT_FILE=${TIMESTAMP}.jpg
 }
 
