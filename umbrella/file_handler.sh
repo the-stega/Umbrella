@@ -4,21 +4,21 @@
 DO_FILE() {
     FILETYPE=`/usr/bin/file -bi ${LARGEFILE}`
     case $FILETYPE in
-        " image/jpeg " )
+        image/jpeg )
             JPG_OUTPUT
             MODE=image
             ;;
-         " video/3gpp " )
+         video/3gpp )
             MOV_SUFF=3gp
             MOV_OUTPUT
             MODE=movie 
             ;;
-         " video/quicktime " )
+         video/quicktime )
             MOV_SUFF=mov
             MOV_OUTPUT
             MODE=movie 
             ;;
-          *)
+          * )
             echo "I have no idea what this is."  
             LARGEFILE=${WORKDIR}/scratch/placeholder.jpg
             SUBJECT=`cat ${WORKDIR}/placeholder.txt`
@@ -32,14 +32,8 @@ JPG_OUTPUT() {
 #subroutine for manipulating inbound images
     # The name and format of the imagesge may vary.  
     /bin/cp ${LARGEFILE} photoX1X.jpg 2> /dev/null
-    # If something is broken: it will use the placeholder image.
-    if [ ! -f photoX1X.jpg ]
-    then
-	   cp placeholder.jpg photoX1X.jpg;
-    fi
     # Otherwise it's going to use the nice new image
     chmod 744 photoX1X.jpg
-
     # Due to changes in how iPhones save images, we now need to pull 
     # out the Orientation from the EXIF data
     # right now this script uses EXIF which does not use a numeric value
