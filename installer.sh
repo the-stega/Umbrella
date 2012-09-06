@@ -63,10 +63,10 @@ sleep 1
 echo "I have successfully run the iPhone test cases. You should be able to view WORKDIR/index.php from a web browser"
 (cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-landscape.eml)
 sleep 1
-#(cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-portrait.eml)
-#sleep 1
-#(cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-video.eml)
-#sleep 1
-#echo "I have successfully run the Android test cases. You should be able to view WORKDIR/index.php from a web browser"
+(cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-portrait.eml)
+sleep 1
+(cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-video.eml)
+sleep 1
+echo "I have successfully run the Android test cases. You should be able to view WORKDIR/index.php from a web browser"
 echo "Done with install"
 echo "Please run your own samples through now"
