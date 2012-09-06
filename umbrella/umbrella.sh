@@ -51,7 +51,7 @@ cat > ${TEMPFILE}
 SUBJECT=`grep -i \^subject: ${TEMPFILE} | cut -c 10-100`
 ${MUNPACK} -q -C scratch < ${TEMPFILE} > /dev/null 2> /dev/null
 #Assume largest file. (this is to deal with android multipart message wonkiness)
-LARGEFILE=`/bin/ls -S1 ${WORKDIR}/scratch | head -1`
+LARGEFILE=${WORKDIR}/scratch/`/bin/ls -S1 ${WORKDIR}/scratch | head -1`
 echo $SUBJECT > ${WORKDIR}/${TIMESTAMP}.title 
 
 rm -f ${TEMPFILE} 
