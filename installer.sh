@@ -56,13 +56,13 @@ echo "I have set the values for index.php and placed it in your WORKDIR"
 # Now run the test cases to be sure the basics are working (will fail if iphone is not the selected type--will add additional test cases for release)
 (cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-landscape-image-02-medium.eml)
 sleep 1
-#(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-image-02-medium.eml)
-#sleep 1
-#(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-vid.eml) 
-#sleep 1
-#echo "I have successfully run the iPhone test cases. You should be able to view WORKDIR/index.php from a web browser"
-#(cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-landscape.eml)
-#sleep 1
+(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-image-02-medium.eml)
+sleep 1
+(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-vid.eml) 
+sleep 1
+echo "I have successfully run the iPhone test cases. You should be able to view WORKDIR/index.php from a web browser"
+(cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-landscape.eml)
+sleep 1
 #(cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-portrait.eml)
 #sleep 1
 #(cd umbrella && sh umbrella.sh < ../samples/android/android-01-s-video.eml)
