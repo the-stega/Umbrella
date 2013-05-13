@@ -9,6 +9,7 @@
 . variables.txt
 . file_handler.sh
 . write_xml.sh
+. trackback.sh
 
 #This is for FreeBSD	
 LOCK_STUFF () {
@@ -76,6 +77,8 @@ fi
 
 CLEAN_XML_WRITE
 
-#rm -rf ${WORKDIR}/scratch
+#TRACKBACK_WRITE
+
+
 
 UNLOCK_STUFF 

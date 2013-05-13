@@ -1,4 +1,5 @@
 #!/bin/sh
+#iPhone support
 
 DO_FILE() {
     FILETYPE=`/usr/bin/file -bi ${LARGEFILE}`
@@ -27,39 +28,8 @@ DO_FILE() {
     esac
 }
 
-JPG_OUTPUT() { 
-#subroutine for manipulating inbound images. 
-#This routine relies upon Image-Magick and replaces the use of JPEGTRAN/EXIFProbe 
-    /bin/cp ${LARGEFILE} photoX1X.jpg 2> /dev/null
-    # Otherwise it's going to use the nice new image
-    chmod 744 photoX1X.jpg
-    
-    $IMAGEMAGICK/convert photoX1X.jpg -auto-orient -resize ${VSIZE} photoX1X.jpg
-    $IMAGEMAGICK/composite -dissolve 50% -gravity south -quality 100 \( ${WATERMARK} -resize 50% \) photoX1X.jpg photoX1X.jpg
-    
-    esac
-    #
-    # Larger images must be scaled with Umbrella, as manipulating them in the RSS code is very problematic.
-    
-
-# In addition to saving it to a permanent file named by the timestamp, it will also copy it to the current top image This is handy if you want to have a splash page that just links to the most current image
-    cp photoX1X.jpg ${WORKDIR}/current-mblog.jpg
-    chmod 755 current-mblog.jpg 
-    mv photoX1X.jpg ${WORKDIR}/images/${TIMESTAMP}.jpg
-  
-    OUTPUT_FILE=${TIMESTAMP}.jpg
-}
-
-MOV_OUTPUT(){ 
-# subroutine to manipulate the inbound movie file.
-     
-     /bin/cp ${LARGEFILE} ${WORKDIR}/movies/${TIMESTAMP}.${MOV_SUFF} 2> /dev/null   
-     chmod 744 ${WORKDIR}/movies/${TIMESTAMP}.${MOV_SUFF}
-     OUTPUT_FILE=${TIMESTAMP}.${MOV_SUFF}
-}
-
 #JPG_OUTPUT_JTRAN() { 
-#subroutine for manipulating inbound images.  This is how it used to be done.
+#subroutine for manipulating inbound images.  This older method is an alternative to using ImageMagick
 #    /bin/cp ${LARGEFILE} photoX1X.jpg 2> /dev/null
     # Otherwise it's going to use the nice new image
 #    chmod 744 photoX1X.jpg
@@ -107,3 +77,35 @@ MOV_OUTPUT(){
 #  
 #    OUTPUT_FILE=${TIMESTAMP}.jpg
 #}
+
+JPG_OUTPUT() { 
+#subroutine for manipulating inbound images. 
+#This routine relies upon Image-Magick and replaces the use of JPEGTRAN/EXIFProbe 
+    /bin/cp ${LARGEFILE} photoX1X.jpg 2> /dev/null
+    # Otherwise it's going to use the nice new image
+    chmod 744 photoX1X.jpg
+    
+    $IMAGEMAGICK/convert photoX1X.jpg -auto-orient -resize ${VSIZE} photoX1X.jpg
+    $IMAGEMAGICK/composite -dissolve 50% -gravity south -quality 100 \( ${WATERMARK} -resize 50% \) photoX1X.jpg photoX1X.jpg
+    
+    esac
+    #
+    # Larger images must be scaled with Umbrella, as manipulating them in the RSS code is very problematic.
+    
+
+# In addition to saving it to a permanent file named by the timestamp, it will also copy it to the current top image This is handy if you want to have a splash page that just links to the most current image
+    cp photoX1X.jpg ${WORKDIR}/current-mblog.jpg
+    chmod 755 current-mblog.jpg 
+    mv photoX1X.jpg ${WORKDIR}/images/${TIMESTAMP}.jpg
+  
+    OUTPUT_FILE=${TIMESTAMP}.jpg
+}
+
+MOV_OUTPUT(){ 
+# subroutine to manipulate the inbound movie file.
+     
+     /bin/cp ${LARGEFILE} ${WORKDIR}/movies/${TIMESTAMP}.${MOV_SUFF} 2> /dev/null   
+     chmod 744 ${WORKDIR}/movies/${TIMESTAMP}.${MOV_SUFF}
+     OUTPUT_FILE=${TIMESTAMP}.${MOV_SUFF}
+}
+
