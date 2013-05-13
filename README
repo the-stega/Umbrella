@@ -15,10 +15,10 @@ v1.0 Made to work with an iPhone.
 
 v2.0 added ability to rotate image based on EXIF data in image as due to changes in IOS 3.0 and greater, images are now saved with the rotation/orientation information in the EXIF information.   
 
-v3.0 added support for other phones and made it a bit more user friendly.  Added the installer script.
+v3.0 added support for other phones and made it a bit more user friendly.  Added the installer script.  Changed over from using JPEGTRAN to Image-Magik
 
 
-Requirements: mpack, jpegtran and exifprobe.  You also need to be able to pipe/filter your email to the it. All three utilities are available via the FreeBSD ports/pkg utilities.  For other operating systems, please check accordingly. 
+Requirements: mpack, image-magik and exifprobe.  You also need to be able to pipe/filter your email to the it. All three utilities, if not installed already, are available via the FreeBSD ports/pkg utilities.  For other operating systems, please check accordingly. 
 
 To use this script:  
 1) Place the Umbrella directory in a directory that is not within /home/www or where ever your website lives.  Your home directory is a good choice.

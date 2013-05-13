@@ -30,18 +30,14 @@ DO_FILE() {
 
 JPG_OUTPUT() { 
 #subroutine for manipulating inbound images
-    # The name and format of the imagesge may vary.  
     /bin/cp ${LARGEFILE} photoX1X.jpg 2> /dev/null
     # Otherwise it's going to use the nice new image
     chmod 744 photoX1X.jpg
-    # Due to changes in how iPhones save images, we now need to pull 
-    # out the Orientation from the EXIF data
-    # right now this script uses EXIF which does not use a numeric value
-    # This section is if you are using the EXIF data and a another app to rotate.  
-    # jhead does this simply
-    # The EXIF options from an iPhone photo are 1, 3, 6 or 8
+    # Due to changes in how iPhones save images, we now need to pull out the Orientation from the EXIF data.  
+    #This is not needed for other phone types
     #
-    ORIENTATION=`$EXIFPROBE -L photoX1X.jpg | grep Orientation | cut -d = -f 2`
+    ORIENTATION=`$IMAGEMAGICK/identify -L photoX1X.jpg | grep Orientation | cut -d = -f 2`
+    # The EXIF options from an iPhone photo are 1, 3, 6 or 8
     case $ORIENTATION in
         " 1 " )
     # camera was at the top left (landscape) so no transform needed
@@ -65,6 +61,14 @@ JPG_OUTPUT() {
             rm old-photoX1X.jpg
             ;;
     esac
+    #
+    # Larger images must be scaled with Umbrella, as manipulating them in the RSS code is very problematic.
+    HSIZE=`$EXIFPROBE -L photoX1X.jpg | grep PixelXDimension | cut -d = -f 4`
+    YSIZE=`$EXIFPROBE -L photoX1X.jpg | grep PixelYDimension | cut -d = -f 4`
+    if ${HSIZE} > 600
+        then
+        ${JPEGTRAN}
+
 # In addition to saving it to a permanent file named by the timestamp, it will also copy it to the current top image This is handy if you want to have a splash page that just links to the most current image
     cp photoX1X.jpg ${WORKDIR}/current-mblog.jpg
     chmod 755 current-mblog.jpg 
