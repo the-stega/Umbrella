@@ -37,7 +37,6 @@ JPG_OUTPUT() {
     $IMAGEMAGICK/convert photoX1X.jpg -auto-orient -resize ${VSIZE} photoX1X.jpg
     $IMAGEMAGICK/composite -dissolve 30% -gravity south -quality 100 \( ${WATERMARK} -resize 50% \) photoX1X.jpg photoX1X.jpg
     
-    esac
 # In addition to saving it to a permanent file named by the timestamp, it will also copy it to the current top image This is handy if you want to have a splash page that just links to the most current image
     cp photoX1X.jpg ${WORKDIR}/current-mblog.jpg
     chmod 755 current-mblog.jpg 
