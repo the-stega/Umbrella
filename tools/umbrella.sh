@@ -4,6 +4,10 @@
 # Take a picture or video with your phone and post it to your private (non-cloud) photo/vid blog
 # Copyright 2004, 2007, 2011, 2012 by stega:  stega@stega.org
 #
+# Change working directory to where things live
+UMBRELLA_HOME=`dirname $0`
+echo "changing working directory to ${UMBRELLA_HOME}"
+cd ${UMBRELLA_HOME}
 #
 # Import the variable file
 . variables.txt
