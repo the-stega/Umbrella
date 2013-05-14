@@ -22,10 +22,10 @@ Requirements: mpack, image-magik.  You also need to be able to pipe/filter your 
 
 To use this script:  
 1) Place the Umbrella directory in a directory that is not within /home/www or where ever your website lives.  Your home directory is a good choice.
-2) Edit the umbrella/variables.txt file replacing the values for all variables necessary 
-3) Run the installer.sh script  (see list below for what the script does)
+2) Edit the tools/variables.txt file replacing the values for all variables necessary 
+3) Run the tools/installer.sh script  (see list below for what the script does)
 4) Test the application by running it with one of the included messages.
-5) Create a mail filter to pass incoming messages to umbrella.sh (You will want to filter by both sending/receiving address and possibly other variables to insure basic security.)
+5) Create a mail filter to pass incoming messages to tools/umbrella.sh (You will want to filter by both sending/receiving address and possibly other variables to insure basic security.)
 6) Test with your phone as the sending device.  Keep in mind there is no uniformity across most Android platforms, so if you are using such a device, you may need to adjust items in the device specific script.
 7) See the contents of the WORKDIR/index.php to perform tests prior to launching.  Once tests are successful, delete feed.xml and old.xml and begin your blogging. You can also simply delete your WORKDIR and re-run the installer.sh
 

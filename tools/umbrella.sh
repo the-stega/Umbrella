@@ -35,7 +35,7 @@ LOCK_STUFF () {
 }
 
 UNLOCK_STUFF () {
-	rm /tmp/umbrella.lock
+	rm /tmp/umbrella.lockB
 	echo "Removing current lockfile."	
 }
 
@@ -59,8 +59,7 @@ echo $SUBJECT > ${WORKDIR}/${TIMESTAMP}.title
 rm -f ${TEMPFILE} 
 
 #If Munpack finds no files:  use the place holder
-if [ $LARGEFILEx = x ]
-then
+if [ ${LARGEFILE}x = "x" ]; then
 	LARGEFILE=${WORKDIR}/scratch/placeholder.jpg
 	SUBJECT=`cat ${PLACEHOLDER_TXT}`
 fi
