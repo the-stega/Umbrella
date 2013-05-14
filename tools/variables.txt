@@ -20,7 +20,7 @@ EMAIL="stega@stega.org (stega)"
 #EMAIL="user@yourdomain.com (stega)" 
 #
 #Trackback on? It is best to keep this turned OFF while you are doing initial tests/debugging. Set to 1 to enable.
-TRACK_BACK=1
+TRACK_BACK=0
 #
 # Configure how many entries will be shown (you can manually change this later by editing the working index.php)
 HOW_MANY=4
