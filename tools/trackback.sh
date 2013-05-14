@@ -13,5 +13,5 @@ TRACKBACK_WRITE() {
 	echo "You can use this link to share your post with others:" >>$EMAILMESSAGE
 	echo "${LINK}" >>$EMAILMESSAGE
 	# send an email using /bin/mail
-	/bin/mail -s "$MAIL_SUBJECT" "$EMAIL" < $EMAILMESSAGE
+	/usr/bin/mail -s "$MAIL_SUBJECT" "$EMAIL" < $EMAILMESSAGE
 }
