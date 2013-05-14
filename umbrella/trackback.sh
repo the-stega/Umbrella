@@ -2,8 +2,7 @@
 #iPhone support
 #
 TRACKBACK_WRITE() { 
-if [ $LINKx = x ]
-then
+if [ ${LINK}x = "x" ]; then
     return
 fi
 MSUBJECT="Post from your Phone at ${TITLESTAMP}"
