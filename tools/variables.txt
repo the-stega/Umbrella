@@ -28,7 +28,7 @@ VSIZE="480"
 # Location of your watermark.  
 # You can make your own and then change this value to whatever you call it.  
 # Just be sure you place it within the same directory as variables.txt and umbrella.sh
-WATERMARK="umbrella-wm.jpg"
+WATERMARK="umbrella-wm.png"
 #
 # Optional Configure a stylesheet you would like to use (default is style.css) If you change this, it should be the full or relative path.
 STYLE="http://www.stega.org/Umbrella/style.css"
