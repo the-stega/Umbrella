@@ -27,6 +27,9 @@ XML_IMAGE(){
     echo "<author>${EMAIL}</author>" >> ${WORKDIR}/new.xml
     echo "<pubDate>${DCSTAMP} ${TZ}</pubDate>" >> ${WORKDIR}/new.xml
     echo "</item>" >> ${WORKDIR}/new.xml
+    #
+    # Set the LINK Variable.  This is used later to provide a trackback.
+    LINK="${URL}/images/${TIMESTAMP}.jpg"
 }
 
 #
@@ -53,6 +56,9 @@ XML_MOVIE(){
     echo "<author>${EMAIL}</author>" >> ${WORKDIR}/new.xml
     echo "<pubDate>${DCSTAMP} ${TZ}</pubDate>" >> ${WORKDIR}/new.xml
     echo "</item>"  >> ${WORKDIR}/new.xml
+    #
+    # Set the LINK Variable.  This is used later to provide a trackback.
+    LINK="${URL}/images/${TIMESTAMP}.jpg"
 }
 
 

@@ -20,7 +20,7 @@ DO_FILE() {
           * )
             echo "I have no idea what this is."  
             LARGEFILE=${WORKDIR}/scratch/placeholder.jpg
-            SUBJECT=`cat ${WORKDIR}/placeholder.txt`
+            SUBJECT=`cat ${PLACEHOLDER_TXT}`
             JPG_OUTPUT
             MODE=image
             ;;

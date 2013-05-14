@@ -15,16 +15,14 @@ URL="http://www.stega.org/Umbrella"
 SITE="http://www.stega.org"
 #SITE="http://www.yourdomain.com"
 #
-# Configure your contact email: to be sure to include a real name value within the ()
+# Configure your contact email: to be sure to include a real name value within the () as this is used to send your trackback
 EMAIL="stega@stega.org (stega)" 
 #EMAIL="user@yourdomain.com (stega)" 
 #
 # Configure how many entries will be shown (you can manually change this later by editing the working index.php)
 HOW_MANY=4
 #
-# Configure maximum image size that will be displayed.  The image will be converted/altered, thus
-# it is not recommended that you use Umbrella to archive images.
-HSIZE="480"
+# Configure maximum image width.  The image will be converted/altered, thus it is not recommended that you use Umbrella to archive images.
 VSIZE="480"
 #
 # Location of your watermark.  
@@ -38,6 +36,7 @@ STYLE="http://www.stega.org/Umbrella/style.css"
 # Your copyright information
 COPYRIGHT="Copyright 2013, stega doggie and tree."
 #COPYRIGHT="Copyright 2012, by me."
+PLACEHOLDER_TXT="Ooops! Something went wrong or the file was corrupt.  Umbrella thus can't display the message contents properly."
 #
 #Path to file with any Comment/Copyright you want added to the EXIF--leave this empty if you do not wish to use (Not supported yet.)
 #COMMENTS="/home/www/Sites/stega.org/htdocs/mblog/Umbrella/comments.txt"

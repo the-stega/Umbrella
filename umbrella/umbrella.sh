@@ -45,6 +45,7 @@ cd ${WORKDIR}
 LOCK_STUFF
 
 rm -rf ${WORKDIR}/scratch
+# It's better to remove the old when you're about to write new.
 mkdir -p scratch
 # Spam the message on standard input into a scratch file. Pull out the subject header field, then explode the message into its various parts.
 TEMPFILE=`mktemp ${TEMP_TEMPLATE}`
@@ -61,7 +62,7 @@ rm -f ${TEMPFILE}
 if [ $LARGEFILEx = x ]
 then
 	LARGEFILE=${WORKDIR}/scratch/placeholder.jpg
-	SUBJECT=`cat ${WORKDIR}/placeholder.txt`
+	SUBJECT=`cat ${PLACEHOLDER_TXT}`
 fi
 
 # Ask the phone-specific logic to work out what it's done
