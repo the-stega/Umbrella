@@ -41,6 +41,7 @@ WEB=$WORKDIR
 # Do the install tasks
 mkdir ${WEB}
 cp www/placeholder.jpg ${WEB}/
+cp www/umbrella-wm.png ${WEB}/
 cp www/style.css ${WEB}/
 touch ${WEB}/feed.xml
 touch ${WEB}/old.xml
