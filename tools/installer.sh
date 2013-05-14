@@ -55,7 +55,7 @@ cat www/index.php | sed -e "s%HOW_MANY%${HOW_MANY}%" -e "s%URL_REPLACE%${URL}%" 
 echo "I have set the values for index.php and placed it in your WORKDIR"
 #
 # Now run the test cases to be sure the basics are working (will fail if iphone is not the selected type--will add additional test cases for release)
-(cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-landscape-image-02-medium.eml)
+(sh umbrella.sh < ../samples/iphone/iphone-landscape-image-02-medium.eml)
 sleep 1
 # (cd umbrella && sh umbrella.sh < ../samples/iphone/iphone-portrait-image-02-medium.eml)
 # sleep 1
