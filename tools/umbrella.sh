@@ -49,8 +49,8 @@ rm -rf ${WORKDIR}/scratch
 mkdir -p scratch
 # Spam the message on standard input into a scratch file. Pull out the subject header field, then explode the message into its various parts.
 TEMPFILE=`mktemp ${TEMP_TEMPLATE}`
-cat > ${TEMPFILE}
-SUBJECT=`grep -i \^subject: ${TEMPFILE} | cut -c 10-100`
+/bin/cat > ${TEMPFILE}
+SUBJECT=`/usr/bin/grep -i \^subject: ${TEMPFILE} | cut -c 10-100`
 ${MUNPACK} -q -C scratch < ${TEMPFILE} > /dev/null 2> /dev/null
 #Assume largest file. (this is to deal with android multipart message wonkiness)
 LARGEFILE=${WORKDIR}/scratch/`/bin/ls -S1 ${WORKDIR}/scratch | head -1`
