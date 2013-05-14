@@ -36,7 +36,7 @@ STYLE="http://www.stega.org/Umbrella/style.css"
 # Your copyright information
 COPYRIGHT="Copyright 2013, stega doggie and tree."
 #COPYRIGHT="Copyright 2012, by me."
-PLACEHOLDER_TXT="Ooops! Something went wrong or the file was corrupt.  Umbrella thus can't display the message contents properly."
+PLACEHOLDER_TXT="Ooops! Something went wrong or the file was corrupt. Umbrella thus can't display the message contents properly."
 #
 #Path to file with any Comment/Copyright you want added to the EXIF--leave this empty if you do not wish to use (Not supported yet.)
 #COMMENTS="/home/www/Sites/stega.org/htdocs/mblog/Umbrella/comments.txt"
@@ -59,6 +59,6 @@ TEMP_TEMPLATE=${WORKDIR}/umbrella-mail.XXXXXX
 
 # These may need set if you have things installed elsewhere
 #MUNPACK="/usr/local/bin/munpack"
-MUNPACK="munpack/bin"
+MUNPACK="munpack/bin/munpack"
 #JPEGTRAN="/usr/local/bin/jpegtran"
 IMAGEMAGICK="/usr/local/bin/"

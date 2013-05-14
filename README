@@ -36,6 +36,7 @@ The install.sh script does the following:
 2) Moves the contents of www/ to this directory (except for index.php) and touches feed.xml and old.xml if they do not exist in the WORKDIR location
 3) Edits index.php and places edited version in WORKDIR
 4) unpacks magpierss and creates sym link in WORKDIR
+5) unpacks munpack
 
 
 ##########################
