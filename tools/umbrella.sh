@@ -77,6 +77,10 @@ fi
 
 CLEAN_XML_WRITE
 
-TRACKBACK_WRITE
+if [ ${TRACK_BACK} -eq 1 ]; then
+	TRACKBACK_WRITE
+else
+	return
+fi
 
 UNLOCK_STUFF
