@@ -59,6 +59,6 @@ TEMP_TEMPLATE=${WORKDIR}/umbrella-mail.XXXXXX
 
 # These may need set if you have things installed elsewhere
 #MUNPACK="/usr/local/bin/munpack"
-MUNPACK="munpack/bin/munpack"
+MUNPACK="/usr/bin/munpack"
 #JPEGTRAN="/usr/local/bin/jpegtran"
 IMAGEMAGICK="/usr/local/bin/"

@@ -39,7 +39,6 @@ WEB=$WORKDIR
 #
 
 # Do the install tasks
-tar -xf ../dev/munpack-1-6.tar
 mkdir ${WEB}
 cp www/placeholder.jpg ${WEB}/
 cp www/style.css ${WEB}/
