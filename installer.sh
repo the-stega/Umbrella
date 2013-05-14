@@ -38,6 +38,7 @@ fi
 WEB=$WORKDIR
 #
 # Do the install tasks
+tar -xf dev/munpack-1-6.tar umbrella/
 mkdir ${WEB}
 cp www/placeholder.jpg ${WEB}/
 cp www/placeholder.txt ${WEB}/
