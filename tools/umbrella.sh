@@ -51,7 +51,6 @@ mkdir -p scratch
 TEMPFILE=`mktemp ${TEMP_TEMPLATE}`
 cat > ${TEMPFILE}
 SUBJECT=`grep -i \^subject: ${TEMPFILE} | cut -c 10-100`
-echo "munpack lives here: ${MUNPACK}"
 ${MUNPACK} -q -C scratch < ${TEMPFILE} > /dev/null 2> /dev/null
 #Assume largest file. (this is to deal with android multipart message wonkiness)
 LARGEFILE=${WORKDIR}/scratch/`/bin/ls -S1 ${WORKDIR}/scratch | head -1`
